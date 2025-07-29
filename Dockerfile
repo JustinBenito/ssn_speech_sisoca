@@ -6,13 +6,15 @@ RUN apt-get update && apt-get install -y \
     build-essential git wget sox python3 python3-pip python3-venv \
     libatlas-base-dev libboost-all-dev zlib1g-dev automake autoconf \
     libtool subversion gfortran cmake libopenblas-dev liblapack-dev \
-    libsndfile1-dev sox ffmpeg curl ca-certificates && \
+    libsndfile1-dev sox ffmpeg curl ca-certificates unzip && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # 2. Install Kaldi
 WORKDIR /opt
 RUN git clone --depth 1 https://github.com/kaldi-asr/kaldi.git
 WORKDIR /opt/kaldi/tools
+RUN mkdir -p python
+RUN sed -i 's/OPENFST_VERSION = .*/OPENFST_VERSION = 1.8.2/' Makefile
 RUN make -j 4
 WORKDIR /opt/kaldi/src
 RUN ./configure --shared && make depend -j 4 && make -j 4
