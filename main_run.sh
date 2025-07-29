@@ -71,6 +71,6 @@ echo "$var2"
 
 #python synthesize.py "$var2" $spk
 
-python synthesize_CONTROL.py "$var2"
+python3 synthesize_CONTROL.py "$var2"
 
 #aplay test.wav 
