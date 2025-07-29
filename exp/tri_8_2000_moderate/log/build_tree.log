@@ -1,0 +1,22 @@
+# build-tree --verbose=1 --max-leaves=2000 --cluster-thresh=-1 exp_FG/tri_8_2000/treeacc data/lang_bigram/phones/roots.int exp_FG/tri_8_2000/questions.qst data/lang_bigram/topo exp_FG/tri_8_2000/tree 
+# Started at Wed Aug 28 00:05:27 IST 2024
+#
+build-tree --verbose=1 --max-leaves=2000 --cluster-thresh=-1 exp_FG/tri_8_2000/treeacc data/lang_bigram/phones/roots.int exp_FG/tri_8_2000/questions.qst data/lang_bigram/topo exp_FG/tri_8_2000/tree 
+LOG (build-tree[5.5.1137~1-51744]:main():build-tree.cc:104) Number of separate statistics is 19242
+LOG (build-tree[5.5.1137~1-51744]:BuildTree():build-tree.cc:161) BuildTree: before building trees, map has 40 leaves.
+LOG (build-tree[5.5.1137~1-51744]:SplitDecisionTree():build-tree-utils.cc:575) DoDecisionTreeSplit: split 1960 times, #leaves now 2000
+LOG (build-tree[5.5.1137~1-51744]:BuildTree():build-tree.cc:187) Setting clustering threshold to smallest split 664.969
+VLOG[1] (build-tree[5.5.1137~1-51744]:BuildTree():build-tree.cc:196) After decision tree split, num-leaves = 2000, like-impr = 3.98255 per frame over 6.72217e+06 frames.
+VLOG[1] (build-tree[5.5.1137~1-51744]:BuildTree():build-tree.cc:200) Including just phones that were split, improvement is 3.98255 per frame over 6.72217e+06 frames.
+LOG (build-tree[5.5.1137~1-51744]:BuildTree():build-tree.cc:215) BuildTree: removed 423 leaves.
+VLOG[1] (build-tree[5.5.1137~1-51744]:ClusterEventMapToNClustersRestrictedByMap():build-tree-utils.cc:912) Number of non-empty clusters in map = 40
+VLOG[1] (build-tree[5.5.1137~1-51744]:ClusterEventMapToNClustersRestrictedByMap():build-tree-utils.cc:913) Number of non-empty clusters = 1577
+LOG (build-tree[5.5.1137~1-51744]:BuildTree():build-tree.cc:231) BuildTree: Rounded num leaves to multiple of 8 by removing 1 leaves.
+VLOG[1] (build-tree[5.5.1137~1-51744]:BuildTree():build-tree.cc:256) Objf change due to clustering -0.0276101 per frame.
+VLOG[1] (build-tree[5.5.1137~1-51744]:BuildTree():build-tree.cc:259) Normalizing over only split phones, this is: -0.0276101 per frame.
+VLOG[1] (build-tree[5.5.1137~1-51744]:BuildTree():build-tree.cc:262) Num-leaves is now 1576
+VLOG[1] (build-tree[5.5.1137~1-51744]:main():build-tree.cc:143) For pdf-id 667, low count 36
+WARNING (build-tree[5.5.1137~1-51744]:main():build-tree.cc:185) Saw no stats for following phones: 2 3 4 9 17 19 21 22 25 29 31 33 37 41 42 45 47 49 53 55 57 61 65 69 73 77 78 81 85 86 89 91 93 94 97 99 101 102 105 107 109 113 117 121 122 123 125 129 133 137 141 145 149 151 153 157 158 161 
+LOG (build-tree[5.5.1137~1-51744]:main():build-tree.cc:189) Wrote tree
+# Accounting: time=3 threads=1
+# Ended (code 0) at Wed Aug 28 00:05:30 IST 2024, elapsed time 3 seconds

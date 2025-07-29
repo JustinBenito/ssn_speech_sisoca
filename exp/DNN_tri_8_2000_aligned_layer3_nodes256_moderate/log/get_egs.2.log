@@ -1,0 +1,27 @@
+# nnet-get-egs --left-context=4 --right-context=4 "ark,s,cs:utils/filter_scp.pl --exclude exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/valid_uttlist data/train/split4/2/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split4/2/utt2spk scp:data/train/split4/2/cmvn.scp scp:- ark:- |" "ark,s,cs:gunzip -c exp_FG/tri_8_2000_ali/ali.2.gz | ali-to-pdf exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- | ali-to-post ark:- ark:- |" ark:- | nnet-copy-egs ark:- ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.1.2.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.2.2.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.3.2.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.4.2.ark 
+# Started at Wed Aug 28 00:15:16 IST 2024
+#
+nnet-copy-egs ark:- ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.1.2.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.2.2.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.3.2.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.4.2.ark 
+nnet-get-egs --left-context=4 --right-context=4 'ark,s,cs:utils/filter_scp.pl --exclude exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/valid_uttlist data/train/split4/2/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split4/2/utt2spk scp:data/train/split4/2/cmvn.scp scp:- ark:- |' 'ark,s,cs:gunzip -c exp_FG/tri_8_2000_ali/ali.2.gz | ali-to-pdf exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- | ali-to-post ark:- ark:- |' ark:- 
+apply-cmvn --utt2spk=ark:data/train/split4/2/utt2spk scp:data/train/split4/2/cmvn.scp scp:- ark:- 
+ali-to-pdf exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- 
+ali-to-post ark:- ark:- 
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA1794
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2175
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2188
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2197
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2241
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2397
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2425
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2448
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2452
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2507
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2610
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FGA2725
+LOG (ali-to-pdf[5.5.1137~1-51744]:main():ali-to-pdf.cc:68) Converted 4320 alignments to pdf sequences.
+LOG (ali-to-post[5.5.1137~1-51744]:main():ali-to-post.cc:73) Converted 4320 alignments.
+LOG (apply-cmvn[5.5.1137~1-51744]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 4283 utterances, errors on 0
+LOG (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:174) Finished generating examples, successfully processed 4271 feature files, wrote 1362874 examples,  with 1362874 egs in total; 12 files had errors.
+LOG (nnet-copy-egs[5.5.1137~1-51744]:main():nnet-copy-egs.cc:170) Read 1362874 neural-network training examples, wrote 1362874
+# Accounting: time=51 threads=1
+# Ended (code 0) at Wed Aug 28 00:16:07 IST 2024, elapsed time 51 seconds

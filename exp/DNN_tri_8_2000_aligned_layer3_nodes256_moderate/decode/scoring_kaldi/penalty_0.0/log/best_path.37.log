@@ -1,0 +1,1472 @@
+# lattice-scale --inv-acoustic-scale=37 "ark:gunzip -c exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/decode/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=0.0 ark:- ark:- | lattice-best-path --word-symbol-table=data/lang_bigram/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- data/lang_bigram/words.txt | sed s:\<UNK\>::g | sed s:\!SIL::g | cat > exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/decode/scoring_kaldi/penalty_0.0/37.txt 
+# Started at Wed Aug 28 07:52:05 IST 2024
+#
+lattice-best-path --word-symbol-table=data/lang_bigram/words.txt ark:- ark,t:- 
+lattice-add-penalty --word-ins-penalty=0.0 ark:- ark:- 
+lattice-scale --inv-acoustic-scale=37 'ark:gunzip -c exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/decode/lat.*.gz|' ark:- 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM293, best cost 26.7482 + -24.0757 = 2.67256 over 301 frames.
+FAM293 guruwai sisxyan wanxangginaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM294, best cost 27.0151 + -27.9559 = -0.940771 over 355 frames.
+FAM294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM295, best cost 24.9224 + -31.2691 = -6.34674 over 325 frames.
+FAM295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM296, best cost 33.6626 + -32.2507 = 1.41184 over 448 frames.
+FAM296 iratxtxai suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM297, best cost 30.9691 + -30.7235 = 0.245625 over 399 frames.
+FAM297 suutxcamam arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM298, best cost 28.6677 + -29.3245 = -0.656847 over 379 frames.
+FAM298 asuran tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM299, best cost 26.9842 + -30.0696 = -3.08543 over 358 frames.
+FAM299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM300, best cost 31.4448 + -32.8839 = -1.43911 over 409 frames.
+FAM300 sutxrxeu suuzhal sugaadaaram pinpatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM301, best cost 35.3108 + -32.8907 = 2.42013 over 456 frames.
+FAM301 seewalin kuuwalil pozhudeu widxiyum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM302, best cost 28.4236 + -25.0977 = 3.3259 over 401 frames.
+FAM302 enakkeu njaabaga marxadi unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM303, best cost 28.8108 + -28.4023 = 0.408461 over 401 frames.
+FAM303 njaayirxeu widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM304, best cost 34.7032 + -29.5553 = 5.14783 over 489 frames.
+FAM304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM305, best cost 34.0544 + -37.0367 = -2.9823 over 467 frames.
+FAM305 tatruubamaaga ndadxitteuk kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM306, best cost 26.3424 + -17.6178 = 8.72455 over 287 frames.
+FAM306 tii muutxtxi tii wibatteu ndadxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM307, best cost 24.0751 + -17.8296 = 6.24553 over 277 frames.
+FAM307 un seyaleukkeut tiirweu kaanxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM308, best cost 20.9354 + -14.6656 = 6.26983 over 208 frames.
+FAM308 malar tuuwi waazhtteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM309, best cost 24.0116 + -18.9889 = 5.02268 over 240 frames.
+FAM309 iranxdxeu pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM310, best cost 28.3321 + -30.1043 = -1.77219 over 327 frames.
+FAM310 dusxtxan dusxtxa seyal seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM311, best cost 35.2079 + -33.7711 = 1.43673 over 448 frames.
+FAM311 purxaa tuudeu anuppa tolai duuram parxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM312, best cost 34.3846 + -29.523 = 4.86158 over 402 frames.
+FAM312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM313, best cost 24.9352 + -19.532 = 5.4033 over 279 frames.
+FAM313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM314, best cost 23.8758 + -18.1576 = 5.71822 over 250 frames.
+FAM314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM315, best cost 24.3836 + -24.3789 = 0.00466728 over 264 frames.
+FAM315 toosxattirxkeu parigaaram sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM316, best cost 29.7239 + -31.2577 = -1.53379 over 370 frames.
+FAM316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM317, best cost 31.0683 + -35.4981 = -4.42975 over 445 frames.
+FAM317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM318, best cost 27.3969 + -24.0726 = 3.32431 over 339 frames.
+FAM318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM319, best cost 29.1754 + -27.3007 = 1.87472 over 403 frames.
+FAM319 saalaiyil ndiir ndirambiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM320, best cost 28.3155 + -27.8928 = 0.422623 over 383 frames.
+FAM320 banggalxaadeesx oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM321, best cost 28.9073 + -22.8659 = 6.04141 over 352 frames.
+FAM321 een ippadxi ndoonjjaanaaga ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM322, best cost 23.3011 + -20.3904 = 2.91064 over 271 frames.
+FAM322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM323, best cost 32.8682 + -29.405 = 3.4632 over 403 frames.
+FAM323 ndaatxtxil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM324, best cost 29.6019 + -30.7193 = -1.11738 over 313 frames.
+FAM324 panjjaayatteu wazhakkeu mudxiweukkeu wanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM325, best cost 26.6792 + -23.1513 = 3.52793 over 315 frames.
+FAM325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM326, best cost 27.3247 + -21.1806 = 6.14403 over 288 frames.
+FAM326 pazhanggudxi makkalx panxbeu sirxappeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM327, best cost 29.503 + -30.9959 = -1.49287 over 347 frames.
+FAM327 kaalai bajanai migawum pirabalam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM328, best cost 29.876 + -24.6428 = 5.2332 over 345 frames.
+FAM328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM329, best cost 24.4104 + -23.2224 = 1.18797 over 297 frames.
+FAM329 en purusxan balasaali 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM330, best cost 26.535 + -22.5555 = 3.97945 over 333 frames.
+FAM330 buwaneesxwar uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM331, best cost 22.6982 + -17.8181 = 4.88012 over 244 frames.
+FAM331 puurwa jenma banddam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM332, best cost 24.57 + -25.565 = -0.995045 over 257 frames.
+FAM332 inrxeu puujaiyil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM333, best cost 25.3675 + -20.962 = 4.40549 over 265 frames.
+FAM333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM334, best cost 26.0923 + -25.6857 = 0.40661 over 272 frames.
+FAM334 un mugam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM335, best cost 21.4033 + -21.8676 = -0.46434 over 226 frames.
+FAM335 petxtxiyai kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM336, best cost 22.5957 + -14.3441 = 8.25157 over 209 frames.
+FAM336 pooliyaana waazhkkai tawir 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM337, best cost 25.283 + -25.5141 = -0.231081 over 315 frames.
+FAM337 raagi poosxaakkaana unxaweu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM338, best cost 24.3966 + -20.5295 = 3.86713 over 264 frames.
+FAM338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM339, best cost 22.1881 + -23.9477 = -1.7596 over 272 frames.
+FAM339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM340, best cost 30.9036 + -27.6663 = 3.23729 over 383 frames.
+FAM340 maarc maadattil mahaawiir jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM341, best cost 23.4999 + -19.2108 = 4.28911 over 265 frames.
+FAM341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM342, best cost 23.9824 + -27.3046 = -3.32216 over 270 frames.
+FAM342 muulxai illaadawan mutxtxaalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM343, best cost 27.5297 + -26.5264 = 1.00329 over 310 frames.
+FAM343 tozhilil muuladanam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM344, best cost 23.2017 + -18.8761 = 4.32557 over 263 frames.
+FAM344 meejai meel eerxi ndil 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM345, best cost 27.1728 + -29.8262 = -2.6534 over 291 frames.
+FAM345 indda maiyanggalx enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM346, best cost 23.8174 + -19.82 = 3.99746 over 251 frames.
+FAM346 makkalx raajjiyam weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM347, best cost 42.4493 + -27.4622 = 14.9872 over 301 frames.
+FAM347 isxtxam pool roosxam adigam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM348, best cost 21.7052 + -18.8701 = 2.83503 over 220 frames.
+FAM348 lajjai enrxaal wekkam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM349, best cost 25.0065 + -22.733 = 2.27353 over 274 frames.
+FAM349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM350, best cost 34.687 + -32.0618 = 2.62522 over 455 frames.
+FAM350 laksxmi muga laksxanxam ulxlxa penx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM351, best cost 26.5006 + -25.1652 = 1.33539 over 295 frames.
+FAM351 widxaa muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM352, best cost 24.217 + -24.0496 = 0.167437 over 267 frames.
+FAM352 wiitxtxil wiseesxam unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM353, best cost 23.8584 + -20.3596 = 3.49881 over 270 frames.
+FAM353 wandda wisxayattaik kuurxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM354, best cost 32.2487 + -30.5181 = 1.73062 over 377 frames.
+FAM354 en wiidi wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM355, best cost 24.6392 + -27.7622 = -3.12302 over 286 frames.
+FAM355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM356, best cost 22.5678 + -21.3593 = 1.20844 over 236 frames.
+FAM356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM357, best cost 21.1094 + -18.9096 = 2.19987 over 208 frames.
+FAM357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM358, best cost 20.4771 + -17.9352 = 2.54192 over 184 frames.
+FAM358 jaadi illaiyadxi paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM359, best cost 27.2087 + -27.6455 = -0.436806 over 300 frames.
+FAM359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM360, best cost 22.7053 + -28.2571 = -5.55183 over 280 frames.
+FAM360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM361, best cost 20.0134 + -20.2592 = -0.245728 over 203 frames.
+FAM361 ajiiranxak koolxaarxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM362, best cost 27.9452 + -21.0343 = 6.91096 over 309 frames.
+FAM362 aktxoobar iranxdxeu gaanddi jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM363, best cost 25.4254 + -24.7085 = 0.716896 over 290 frames.
+FAM363 ndiinggalx sxeemamaaga irunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM364, best cost 23.4493 + -17.081 = 6.36837 over 239 frames.
+FAM364 togudi hetx sanddippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FAM365, best cost 28.5743 + -28.4096 = 0.164639 over 315 frames.
+FAM365 winjnjaana walxarcci ndaatxtxeu walxarcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL293, best cost 29.2826 + -26.7057 = 2.5769 over 357 frames.
+FBL293 guruwai sisxyan wanxangginaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL294, best cost 23.6433 + -24.979 = -1.33564 over 296 frames.
+FBL294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL295, best cost 25.7492 + -35.2726 = -9.52342 over 369 frames.
+FBL295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL296, best cost 34.4118 + -35.5414 = -1.12956 over 483 frames.
+FBL296 iratxtxai suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL297, best cost 45.2092 + -29.1677 = 16.0415 over 416 frames.
+FBL297 suutxcamam arxinddeu ezhuppaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL298, best cost 47.0625 + -36.9833 = 10.0792 over 489 frames.
+FBL298 harisxtxam tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL299, best cost 26.6446 + -31.5398 = -4.89525 over 379 frames.
+FBL299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL300, best cost 32.6971 + -27.4701 = 5.2269 over 529 frames.
+FBL300 sutxrxeu suuzhal sugaadaaram pinpatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL301, best cost 51.5335 + -32.6694 = 18.8641 over 476 frames.
+FBL301 ituwee awaraik kurxitteuk pozhudeu widxiyum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL302, best cost 33.7828 + -32.3676 = 1.4152 over 499 frames.
+FBL302 enakkeu njaabaga marxadi unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL303, best cost 31.6204 + -30.6471 = 0.973301 over 476 frames.
+FBL303 njaayirxeu widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL304, best cost 36.3012 + -43.3617 = -7.06047 over 547 frames.
+FBL304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL305, best cost 70.7455 + -44.6659 = 26.0796 over 689 frames.
+FBL305 patxtxeu romba walikkudaa kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL306, best cost 35.1466 + -35.1852 = -0.0386467 over 528 frames.
+FBL306 tii muutxtxi tii wibatteu ndadxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL307, best cost 62.7323 + -37.8332 = 24.899 over 480 frames.
+FBL307 moodiram eerikkeu appaal wiidxeu kaalai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL308, best cost 22.7416 + -18.64 = 4.10161 over 274 frames.
+FBL308 malar tuuwi waazhtteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL309, best cost 28.3461 + -24.0563 = 4.28979 over 351 frames.
+FBL309 iranxdxeu pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL310, best cost 56.7235 + -28.948 = 27.7755 over 380 frames.
+FBL310 mugattai kulxirndda anjjal eerxuwaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL311, best cost 43.4153 + -47.7331 = -4.31789 over 696 frames.
+FBL311 purxaa tuudeu anuppa tolai duuram parxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL312, best cost 40.7562 + -35.68 = 5.07613 over 581 frames.
+FBL312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL313, best cost 27.4738 + -32.1318 = -4.65797 over 369 frames.
+FBL313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL314, best cost 27.0779 + -22.8811 = 4.19678 over 375 frames.
+FBL314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL315, best cost 44.0175 + -27.2118 = 16.8056 over 359 frames.
+FBL315 bayam ndiikkeu parigaaram sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL316, best cost 31.9989 + -22.8159 = 9.18303 over 467 frames.
+FBL316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL317, best cost 28.7524 + -25.839 = 2.91343 over 350 frames.
+FBL317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL318, best cost 23.9539 + -27.535 = -3.58115 over 334 frames.
+FBL318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL319, best cost 41.0013 + -25.9636 = 15.0378 over 323 frames.
+FBL319 mazhaiyee arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL320, best cost 42.4511 + -31.3955 = 11.0556 over 419 frames.
+FBL320 aarxudal teetxi oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL321, best cost 44.6757 + -29.7409 = 14.9348 over 463 frames.
+FBL321 indda ippadxi ndoonjjaanaaga ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL322, best cost 26.9351 + -29.2069 = -2.27178 over 389 frames.
+FBL322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL323, best cost 32.4733 + -36.6538 = -4.18051 over 437 frames.
+FBL323 ndaatxtxil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL324, best cost 48.8739 + -30.6181 = 18.2558 over 464 frames.
+FBL324 aanaal unggalx wiidxeu enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL325, best cost 26.386 + -25.3736 = 1.01247 over 330 frames.
+FBL325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL326, best cost 49.9413 + -32.8004 = 17.141 over 488 frames.
+FBL326 pala koodxi iruppeu pambaram suzhatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL327, best cost 30.7954 + -23.3037 = 7.49167 over 349 frames.
+FBL327 kaalai bajanai migawum pirabalam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL328, best cost 32.8604 + -30.3747 = 2.48571 over 427 frames.
+FBL328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL329, best cost 43.6462 + -27.5351 = 16.1111 over 348 frames.
+FBL329 ennoodxa sudxidaar maada mazhai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL330, best cost 41.0056 + -26.732 = 14.2736 over 309 frames.
+FBL330 onrxaam uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL331, best cost 23.1603 + -17.5914 = 5.56889 over 258 frames.
+FBL331 puurwa jenma banddam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL332, best cost 26.716 + -21.8028 = 4.91323 over 349 frames.
+FBL332 inrxeu puujaiyil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL333, best cost 27.3502 + -30.9032 = -3.55304 over 361 frames.
+FBL333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL334, best cost 44.2961 + -28.8137 = 15.4825 over 362 frames.
+FBL334 pon porulx kadxumaiyaaga uzhaiyunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL335, best cost 22.9333 + -21.0732 = 1.86016 over 281 frames.
+FBL335 petxtxiyai kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL336, best cost 26.514 + -30.8714 = -4.35744 over 366 frames.
+FBL336 pooliyaana waazhkkai tawir 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL337, best cost 46.2278 + -32.1025 = 14.1254 over 406 frames.
+FBL337 raagi poosxaakkaana waangga poorxeen 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL338, best cost 25.2369 + -25.8669 = -0.629982 over 298 frames.
+FBL338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL339, best cost 23.6539 + -22.8464 = 0.807415 over 278 frames.
+FBL339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL340, best cost 62.4359 + -40.4456 = 21.9903 over 494 frames.
+FBL340 ndaanjjil makkalx aamaa renxdxeu itxli 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL341, best cost 23.0678 + -25.2393 = -2.17151 over 269 frames.
+FBL341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL342, best cost 28.8368 + -28.6005 = 0.236254 over 435 frames.
+FBL342 muulxai illaadawan mutxtxaalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL343, best cost 46.8768 + -30.1974 = 16.6794 over 367 frames.
+FBL343 kuzhanddai tozhilaalxar poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL344, best cost 23.2049 + -15.2186 = 7.98625 over 282 frames.
+FBL344 meejai meel eerxi ndil 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL345, best cost 29.7793 + -28.8011 = 0.978233 over 384 frames.
+FBL345 indda maiyanggalx enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL346, best cost 26.9584 + -17.1488 = 9.80955 over 308 frames.
+FBL346 karektxaana aansaraa ezhudanxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL347, best cost 23.53 + -16.5023 = 7.02767 over 285 frames.
+FBL347 risxikkeu roosxam adigam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL348, best cost 23.1778 + -15.7166 = 7.46127 over 241 frames.
+FBL348 aaranjjeu mitxtxaay inikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL349, best cost 26.0611 + -25.9111 = 0.150072 over 346 frames.
+FBL349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL350, best cost 46.2712 + -23.9493 = 22.3219 over 378 frames.
+FBL350 katti wazhakkam poolaweetaan ulxlxana 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL351, best cost 45.9865 + -31.5139 = 14.4725 over 411 frames.
+FBL351 eksaam muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL352, best cost 24.7855 + -24.6964 = 0.0890942 over 300 frames.
+FBL352 wiitxtxil wiseesxam unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL353, best cost 24.5776 + -21.9042 = 2.67336 over 309 frames.
+FBL353 wandda wisxayattaik kuurxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL354, best cost 52.8861 + -34.1701 = 18.7161 over 495 frames.
+FBL354 en iniya wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL355, best cost 27.0797 + -26.3676 = 0.712139 over 353 frames.
+FBL355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL356, best cost 25.0513 + -22.8189 = 2.23245 over 269 frames.
+FBL356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL357, best cost 21.0327 + -15.5299 = 5.50286 over 201 frames.
+FBL357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL358, best cost 50.6967 + -28.4707 = 22.2259 over 307 frames.
+FBL358 kaalxi walxarcci paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL359, best cost 28.1476 + -27.3089 = 0.838688 over 352 frames.
+FBL359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL360, best cost 21.5774 + -13.7153 = 7.86212 over 240 frames.
+FBL360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL361, best cost 21.6431 + -14.8645 = 6.77859 over 290 frames.
+FBL361 anggee inggee paarkkaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL362, best cost 44.9476 + -30.0258 = 14.9219 over 423 frames.
+FBL362 saappaadxeu iranxdxeu gaanddi jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL363, best cost 25.2225 + -20.8921 = 4.33048 over 308 frames.
+FBL363 ndiinggalx sxeemamaaga irunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL364, best cost 41.6864 + -24.6796 = 17.0068 over 380 frames.
+FBL364 kulxircci perxum pazhakkam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FBL365, best cost 40.4155 + -28.625 = 11.7905 over 433 frames.
+FBL365 widxaa muyarxci walxarcci ndaatxtxeu walxarcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH293, best cost 27.9423 + -21.2368 = 6.70546 over 349 frames.
+FDH293 guruwai sisxyan wanxangginaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH294, best cost 25.0564 + -20.7522 = 4.30421 over 303 frames.
+FDH294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH295, best cost 33.6804 + -40.9724 = -7.29203 over 551 frames.
+FDH295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH296, best cost 39.4288 + -41.2935 = -1.86465 over 535 frames.
+FDH296 iratxtxai suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH297, best cost 30.6583 + -28.7391 = 1.9193 over 415 frames.
+FDH297 suutxcamam arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH298, best cost 30.4803 + -28.6189 = 1.86141 over 444 frames.
+FDH298 asuran tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH299, best cost 25.5468 + -29.3431 = -3.79631 over 336 frames.
+FDH299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH300, best cost 37.5979 + -39.4953 = -1.89748 over 520 frames.
+FDH300 sutxrxeu suuzhal sugaadaaram pinpatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH301, best cost 62.0134 + -35.7595 = 26.254 over 491 frames.
+FDH301 solleu ons pozhudeu widxiyum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH302, best cost 53.5299 + -36.8721 = 16.6578 over 512 frames.
+FDH302 enakkeu muunxeu ndaalx wayirxeu marxadi unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH303, best cost 33.5123 + -32.0216 = 1.49068 over 426 frames.
+FDH303 njaayirxeu widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH304, best cost 34.8688 + -33.1525 = 1.71621 over 491 frames.
+FDH304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH305, best cost 50.419 + -30.7198 = 19.6992 over 504 frames.
+FDH305 saasxtxaanggam ndadxitteuk kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH306, best cost 31.4495 + -31.5848 = -0.135296 over 381 frames.
+FDH306 tii muutxtxi tii wibatteu ndadxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH307, best cost 30.882 + -24.8965 = 5.98553 over 397 frames.
+FDH307 un seyaleukkeut tiirweu kaanxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH308, best cost 26.4087 + -21.9424 = 4.46631 over 327 frames.
+FDH308 malar tuuwi waazhtteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH309, best cost 29.5944 + -26.4242 = 3.17019 over 391 frames.
+FDH309 iranxdxeu pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH310, best cost 33.2681 + -35.307 = -2.03892 over 405 frames.
+FDH310 dusxtxan dusxtxa seyal seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH311, best cost 39.1835 + -29.8379 = 9.34557 over 517 frames.
+FDH311 purxaa tuudeu anuppa tolai duuram parxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH312, best cost 37.3145 + -33.5892 = 3.72535 over 437 frames.
+FDH312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH313, best cost 29.1383 + -25.2774 = 3.86089 over 342 frames.
+FDH313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH314, best cost 30.5032 + -26.6232 = 3.88007 over 396 frames.
+FDH314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH315, best cost 26.8296 + -21.0433 = 5.7863 over 312 frames.
+FDH315 toosxattirxkeu parigaaram sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH316, best cost 34.4622 + -38.9283 = -4.4661 over 495 frames.
+FDH316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH317, best cost 28.7851 + -31.3657 = -2.58059 over 411 frames.
+FDH317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH318, best cost 24.7587 + -30.2938 = -5.5351 over 339 frames.
+FDH318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH319, best cost 30.936 + -32.3479 = -1.4119 over 466 frames.
+FDH319 saalaiyil ndiir ndirambiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH320, best cost 26.1482 + -21.3409 = 4.80727 over 337 frames.
+FDH320 banggalxaadeesx oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH321, best cost 81.5601 + -41.267 = 40.2931 over 472 frames.
+FDH321 piriyaanxi pidxi ndaanjjil awar ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH322, best cost 29.1278 + -30.854 = -1.72617 over 397 frames.
+FDH322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH323, best cost 35.5904 + -33.0602 = 2.53025 over 491 frames.
+FDH323 ndaatxtxil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH324, best cost 34.2018 + -35.0979 = -0.89608 over 421 frames.
+FDH324 panjjaayatteu wazhakkeu mudxiweukkeu wanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH325, best cost 33.023 + -27.839 = 5.184 over 429 frames.
+FDH325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH326, best cost 33.1958 + -30.2255 = 2.97026 over 431 frames.
+FDH326 pazhanggudxi makkalx panxbeu sirxappeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH327, best cost 33.4953 + -34.3069 = -0.811607 over 426 frames.
+FDH327 kaalai bajanai migawum pirabalam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH328, best cost 28.9962 + -27.7345 = 1.26172 over 355 frames.
+FDH328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH329, best cost 44.5258 + -34.6242 = 9.90163 over 413 frames.
+FDH329 sanxdxai purusxan balasaali 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH330, best cost 29.0392 + -26.2715 = 2.76769 over 387 frames.
+FDH330 buwaneesxwar uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH331, best cost 26.1254 + -25.0104 = 1.11502 over 327 frames.
+FDH331 puurwa jenma banddam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH332, best cost 43.7795 + -26.1917 = 17.5878 over 322 frames.
+FDH332 iccambawattil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH333, best cost 29.2267 + -24.3122 = 4.91455 over 357 frames.
+FDH333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH334, best cost 32.7779 + -29.0227 = 3.75524 over 353 frames.
+FDH334 mazhai mugam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH335, best cost 26.422 + -27.3216 = -0.899633 over 367 frames.
+FDH335 petxtxiyai kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH336, best cost 27.734 + -26.2623 = 1.47171 over 393 frames.
+FDH336 pooliyaana waazhkkai tawir 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH337, best cost 27.9119 + -28.0451 = -0.133238 over 394 frames.
+FDH337 raagi poosxaakkaana unxaweu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH338, best cost 25.0531 + -23.7339 = 1.31914 over 294 frames.
+FDH338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH339, best cost 25.4154 + -23.0939 = 2.32147 over 332 frames.
+FDH339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH340, best cost 62.8834 + -30.4661 = 32.4173 over 489 frames.
+FDH340 ndaanggalx taramaana kalwiyai maanxawar jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH341, best cost 26.4531 + -24.7049 = 1.74819 over 316 frames.
+FDH341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH342, best cost 29.455 + -25.4073 = 4.04762 over 404 frames.
+FDH342 muyarxci ndanmai tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH343, best cost 46.3892 + -30.9509 = 15.4383 over 441 frames.
+FDH343 senggamalam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH344, best cost 23.3876 + -22.1004 = 1.28711 over 305 frames.
+FDH344 meejai meel eerxi ndil 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH345, best cost 31.4044 + -25.4149 = 5.98952 over 451 frames.
+FDH345 indda maiyanggalx enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH346, best cost 27.024 + -17.4082 = 9.61581 over 319 frames.
+FDH346 makkalx raajjiyam weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH347, best cost 25.4251 + -18.6032 = 6.82192 over 294 frames.
+FDH347 risxikkeu roosxam adigam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH348, best cost 36.3668 + -20.0916 = 16.2752 over 342 frames.
+FDH348 kanddaiyaanaalum kasakkik 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH349, best cost 32.6015 + -25.724 = 6.87754 over 431 frames.
+FDH349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH350, best cost 31.8042 + -34.0946 = -2.29034 over 389 frames.
+FDH350 laksxmi muga laksxanxam ulxlxa penx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH351, best cost 30.4803 + -28.5199 = 1.96036 over 379 frames.
+FDH351 widxaa muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH352, best cost 45.5192 + -32.0905 = 13.4288 over 395 frames.
+FDH352 wiikkili ons wiseesxam unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH353, best cost 27.074 + -16.6547 = 10.4193 over 331 frames.
+FDH353 wandda wisxayattaik kuurxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH354, best cost 54.4807 + -41.2947 = 13.186 over 565 frames.
+FDH354 jaadi illaiyadxi wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH355, best cost 30.1669 + -32.5421 = -2.37519 over 418 frames.
+FDH355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH356, best cost 28.3724 + -27.9278 = 0.444645 over 336 frames.
+FDH356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH357, best cost 25.6753 + -24.3929 = 1.28237 over 319 frames.
+FDH357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH358, best cost 24.2656 + -32.4968 = -8.2312 over 342 frames.
+FDH358 jaadi illaiyadxi paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH359, best cost 29.5812 + -28.3372 = 1.24407 over 361 frames.
+FDH359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH360, best cost 25.5406 + -20.467 = 5.07363 over 335 frames.
+FDH360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH361, best cost 20.2899 + -15.2577 = 5.03217 over 246 frames.
+FDH361 pirxarai igazhaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH362, best cost 30.9766 + -23.7667 = 7.20991 over 411 frames.
+FDH362 aktxoobar iranxdxeu gaanddi jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH363, best cost 28.2509 + -29.614 = -1.36304 over 350 frames.
+FDH363 ndiinggalx sxeemamaaga irunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH364, best cost 43.9346 + -21.7605 = 22.1741 over 352 frames.
+FDH364 sanggattil irunddeu sanddippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FDH365, best cost 42.4575 + -31.0811 = 11.3765 over 392 frames.
+FDH365 ndooyatxrxa ndaatxtxeu walxarcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA293, best cost 25.5848 + -29.1241 = -3.53935 over 336 frames.
+FGA293 guruwai sisxyan wanxangginaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA294, best cost 22.5878 + -20.039 = 2.54885 over 265 frames.
+FGA294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA295, best cost 27.4038 + -31.7058 = -4.30201 over 384 frames.
+FGA295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA296, best cost 50.3862 + -48.4886 = 1.89759 over 555 frames.
+FGA296 muutta suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA297, best cost 28.61 + -28.4259 = 0.184044 over 372 frames.
+FGA297 suutxcamam arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA298, best cost 28.6419 + -24.7845 = 3.85739 over 381 frames.
+FGA298 asuran tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA299, best cost 24.176 + -35.7346 = -11.5586 over 421 frames.
+FGA299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA300, best cost 36.0549 + -40.0751 = -4.02018 over 587 frames.
+FGA300 sutxrxeu suuzhal sugaadaaram pinpatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA301, best cost 56.9621 + -37.4273 = 19.5348 over 545 frames.
+FGA301 asaamin kuwakaatti pool unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA302, best cost 29.6749 + -33.7705 = -4.0955 over 446 frames.
+FGA302 enakkeu njaabaga marxadi unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA303, best cost 27.4349 + -28.4816 = -1.04668 over 398 frames.
+FGA303 njaayirxeu widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA304, best cost 40.1344 + -37.8465 = 2.28786 over 659 frames.
+FGA304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA305, best cost 34.3636 + -31.0496 = 3.31392 over 549 frames.
+FGA305 tatruubamaaga ndadxitteuk kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA306, best cost 38.3742 + -40.8164 = -2.44221 over 614 frames.
+FGA306 tii muutxtxi tii wibatteu ndadxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA307, best cost 42.8223 + -24.736 = 18.0863 over 371 frames.
+FGA307 kudxisai tiiyaal tiirweu kaanxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA308, best cost 24.4255 + -24.605 = -0.179564 over 355 frames.
+FGA308 malar tuuwi waazhtteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA309, best cost 45.5873 + -36.126 = 9.4613 over 465 frames.
+FGA309 eezhai pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA310, best cost 31.3272 + -41.0865 = -9.75927 over 568 frames.
+FGA310 dusxtxan dusxtxa seyal seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA311, best cost 65.262 + -48.6485 = 16.6135 over 686 frames.
+FGA311 purxaa tuudeu anuppa tolai ennoodxa ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA312, best cost 38.7749 + -40.9525 = -2.17757 over 616 frames.
+FGA312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA313, best cost 32.0591 + -36.096 = -4.03694 over 503 frames.
+FGA313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA314, best cost 30.9556 + -26.8066 = 4.14905 over 460 frames.
+FGA314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA315, best cost 28.9636 + -35.2878 = -6.32419 over 428 frames.
+FGA315 toosxattirxkeu parigaaram sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA316, best cost 30.1047 + -41.6667 = -11.562 over 492 frames.
+FGA316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA317, best cost 24.7627 + -28.711 = -3.94834 over 401 frames.
+FGA317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA318, best cost 21.8888 + -21.8133 = 0.0754776 over 283 frames.
+FGA318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA319, best cost 31.3393 + -33.4212 = -2.0819 over 525 frames.
+FGA319 saalaiyil ndiir ndirambiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA320, best cost 26.8176 + -27.9571 = -1.13951 over 412 frames.
+FGA320 banggalxaadeesx oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA321, best cost 44.1509 + -44.3696 = -0.218723 over 487 frames.
+FGA321 ndii ippadxi ndoonjjaanaaga ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA322, best cost 26.799 + -29.924 = -3.12499 over 449 frames.
+FGA322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA323, best cost 36.299 + -30.5508 = 5.74821 over 518 frames.
+FGA323 ndaatxtxil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA324, best cost 36.4841 + -45.765 = -9.28083 over 548 frames.
+FGA324 panjjaayatteu wazhakkeu mudxiweukkeu wanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA325, best cost 27.9478 + -30.0985 = -2.15074 over 439 frames.
+FGA325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA326, best cost 34.7634 + -32.5745 = 2.18885 over 520 frames.
+FGA326 pazhanggudxi makkalx panxbeu sirxappeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA327, best cost 33.9914 + -38.9353 = -4.9439 over 519 frames.
+FGA327 kaalai bajanai migawum pirabalam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA328, best cost 31.7034 + -41.3324 = -9.62908 over 506 frames.
+FGA328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA329, best cost 25.8196 + -29.2547 = -3.43508 over 439 frames.
+FGA329 en purusxan balasaali 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA330, best cost 29.404 + -31.3158 = -1.91178 over 458 frames.
+FGA330 buwaneesxwar uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA331, best cost 23.736 + -26.7599 = -3.02395 over 320 frames.
+FGA331 puurwa jenma banddam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA332, best cost 27.1151 + -30.2952 = -3.18004 over 349 frames.
+FGA332 inrxeu puujaiyil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA333, best cost 29.7653 + -33.7384 = -3.97309 over 429 frames.
+FGA333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA334, best cost 45.0169 + -37.1121 = 7.90482 over 373 frames.
+FGA334 onrxaam paagam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA335, best cost 23.8806 + -30.9411 = -7.06051 over 308 frames.
+FGA335 petxtxiyai kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA336, best cost 25.8338 + -32.0773 = -6.24358 over 377 frames.
+FGA336 pooliyaana waazhkkai tawir 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA337, best cost 26.7961 + -34.5158 = -7.71973 over 413 frames.
+FGA337 raagi poosxaakkaana unxaweu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA338, best cost 27.908 + -32.2637 = -4.35566 over 377 frames.
+FGA338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA339, best cost 24.3107 + -30.7166 = -6.40589 over 301 frames.
+FGA339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA340, best cost 30.6 + -30.3808 = 0.219252 over 462 frames.
+FGA340 maarc maadattil mahaawiir jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA341, best cost 23.9339 + -25.066 = -1.13209 over 361 frames.
+FGA341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA342, best cost 27.5791 + -29.7482 = -2.16916 over 385 frames.
+FGA342 muulxai illaadawan mutxtxaalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA343, best cost 31.1222 + -28.7147 = 2.40748 over 425 frames.
+FGA343 tozhilil muuladanam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA344, best cost 23.5552 + -22.6315 = 0.923651 over 317 frames.
+FGA344 meejai meel eerxi ndil 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA345, best cost 27.79 + -29.1371 = -1.3471 over 413 frames.
+FGA345 indda maiyanggalx enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA346, best cost 25.6494 + -24.4147 = 1.23473 over 369 frames.
+FGA346 makkalx raajjiyam weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA347, best cost 26.7511 + -30.5462 = -3.79512 over 405 frames.
+FGA347 risxikkeu roosxam adigam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA348, best cost 23.5192 + -21.3599 = 2.15928 over 353 frames.
+FGA348 lajjai enrxaal wekkam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA349, best cost 27.7806 + -25.9736 = 1.80703 over 377 frames.
+FGA349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA350, best cost 31.1561 + -26.1419 = 5.01416 over 474 frames.
+FGA350 laksxmi muga laksxanxam ulxlxa penx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA351, best cost 29.2578 + -27.9705 = 1.28725 over 345 frames.
+FGA351 widxaa muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA352, best cost 27.3022 + -37.4596 = -10.1574 over 432 frames.
+FGA352 wiitxtxil wiseesxam unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA353, best cost 27.1323 + -25.4618 = 1.6705 over 345 frames.
+FGA353 wandda wisxayattaik kuurxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA354, best cost 44.6197 + -47.7277 = -3.10805 over 740 frames.
+FGA354 en wiidi wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA355, best cost 34.7355 + -36.3252 = -1.58966 over 589 frames.
+FGA355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA356, best cost 26.1692 + -33.6929 = -7.52372 over 498 frames.
+FGA356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA357, best cost 25.9583 + -31.6666 = -5.70835 over 471 frames.
+FGA357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA358, best cost 24.0778 + -36.3976 = -12.3198 over 509 frames.
+FGA358 jaadi illaiyadxi paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA359, best cost 31.3075 + -32.589 = -1.28152 over 471 frames.
+FGA359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA360, best cost 23.144 + -31.9839 = -8.83986 over 380 frames.
+FGA360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA361, best cost 23.0823 + -25.6623 = -2.58002 over 391 frames.
+FGA361 ajiiranxak koolxaarxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA362, best cost 63.9178 + -42.2261 = 21.6916 over 642 frames.
+FGA362 raajaawaaga eenddinaan wizhaiyawillai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA363, best cost 28.1892 + -37.292 = -9.10288 over 540 frames.
+FGA363 ndiinggalx sxeemamaaga irunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA364, best cost 40.3334 + -29.0194 = 11.3139 over 481 frames.
+FGA364 kaalai sanddippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FGA365, best cost 42.8602 + -28.9265 = 13.9337 over 491 frames.
+FGA365 piriyaanxi ndaatxtxeu walxarcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP293, best cost 28.9063 + -35.5702 = -6.66385 over 412 frames.
+FSP293 guruwai sisxyan wanxangginaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP294, best cost 23.8806 + -31.173 = -7.29239 over 291 frames.
+FSP294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP295, best cost 23.6772 + -32.72 = -9.04274 over 310 frames.
+FSP295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP296, best cost 31.257 + -45.546 = -14.289 over 404 frames.
+FSP296 iratxtxai suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP297, best cost 40.9498 + -32.5105 = 8.43937 over 357 frames.
+FSP297 eksaam arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP298, best cost 22.2213 + -21.2795 = 0.941776 over 230 frames.
+FSP298 asuran tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP299, best cost 24.2498 + -27.49 = -3.24016 over 300 frames.
+FSP299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP300, best cost 30.2304 + -36.4082 = -6.17787 over 383 frames.
+FSP300 sutxrxeu suuzhal sugaadaaram pinpatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP301, best cost 34.5614 + -34.6573 = -0.0959053 over 384 frames.
+FSP301 seewalin kuuwalil pozhudeu widxiyum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP302, best cost 27.4821 + -31.2512 = -3.76914 over 356 frames.
+FSP302 enakkeu njaabaga marxadi unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP303, best cost 42.0363 + -31.6169 = 10.4194 over 340 frames.
+FSP303 ndaaleu widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP304, best cost 33.2299 + -36.6604 = -3.43056 over 472 frames.
+FSP304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP305, best cost 35.566 + -46.9208 = -11.3548 over 497 frames.
+FSP305 tatruubamaaga ndadxitteuk kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP306, best cost 29.9854 + -27.8656 = 2.11976 over 400 frames.
+FSP306 tii muutxtxi tii wibatteu ndadxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP307, best cost 25.4179 + -29.0962 = -3.67838 over 341 frames.
+FSP307 un seyaleukkeut tiirweu kaanxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP308, best cost 23.6752 + -24.6705 = -0.995314 over 270 frames.
+FSP308 malar tuuwi waazhtteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP309, best cost 26.312 + -28.4061 = -2.09413 over 325 frames.
+FSP309 iranxdxeu pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP310, best cost 24.2417 + -25.6945 = -1.45284 over 226 frames.
+FSP310 dusxtxan dusxtxa seyal seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP311, best cost 34.6994 + -39.0342 = -4.33476 over 465 frames.
+FSP311 purxaa tuudeu anuppa tolai duuram parxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP312, best cost 33.7699 + -32.6091 = 1.16075 over 428 frames.
+FSP312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP313, best cost 25.2044 + -23.2392 = 1.96513 over 253 frames.
+FSP313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP314, best cost 25.331 + -22.9495 = 2.38158 over 280 frames.
+FSP314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP315, best cost 24.5712 + -28.2872 = -3.71598 over 314 frames.
+FSP315 toosxattirxkeu parigaaram sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP316, best cost 27.9996 + -27.7284 = 0.271214 over 350 frames.
+FSP316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP317, best cost 24.7405 + -29.9555 = -5.21498 over 353 frames.
+FSP317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP318, best cost 23.5864 + -24.0232 = -0.436806 over 273 frames.
+FSP318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP319, best cost 24.0766 + -26.4172 = -2.3406 over 270 frames.
+FSP319 saalaiyil ndiir ndirambiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP320, best cost 25.6443 + -27.8865 = -2.24219 over 317 frames.
+FSP320 banggalxaadeesx oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP321, best cost 27.2854 + -26.819 = 0.466326 over 351 frames.
+FSP321 een ippadxi ndoonjjaanaaga ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP322, best cost 23.8788 + -24.8233 = -0.944496 over 272 frames.
+FSP322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP323, best cost 34.0625 + -42.4657 = -8.40324 over 465 frames.
+FSP323 ndaatxtxil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP324, best cost 30.6948 + -28.9481 = 1.74666 over 348 frames.
+FSP324 panjjaayatteu wazhakkeu mudxiweukkeu wanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP325, best cost 24.7416 + -19.1043 = 5.63737 over 265 frames.
+FSP325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP326, best cost 26.7218 + -27.7065 = -0.984789 over 269 frames.
+FSP326 pazhanggudxi makkalx panxbeu sirxappeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP327, best cost 28.2912 + -27.9838 = 0.307457 over 357 frames.
+FSP327 kaalai bajanai migawum pirabalam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP328, best cost 29.6673 + -31.8131 = -2.14588 over 395 frames.
+FSP328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP329, best cost 22.9801 + -22.3466 = 0.63341 over 275 frames.
+FSP329 en purusxan balasaali 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP330, best cost 26.6158 + -29.1878 = -2.57194 over 307 frames.
+FSP330 buwaneesxwar uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP331, best cost 23.2644 + -19.6076 = 3.65673 over 251 frames.
+FSP331 puurwa jenma banddam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP332, best cost 27.3948 + -26.4426 = 0.952181 over 330 frames.
+FSP332 inrxeu puujaiyil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP333, best cost 27.1277 + -29.3014 = -2.17376 over 394 frames.
+FSP333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP334, best cost 24.6864 + -27.4659 = -2.77952 over 267 frames.
+FSP334 un mugam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP335, best cost 24.7159 + -23.9817 = 0.734245 over 278 frames.
+FSP335 petxtxiyai kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP336, best cost 25.112 + -27.2989 = -2.18694 over 308 frames.
+FSP336 pooliyaana waazhkkai tawir 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP337, best cost 24.9676 + -28.5075 = -3.53988 over 324 frames.
+FSP337 raagi poosxaakkaana unxaweu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP338, best cost 25.1013 + -25.4366 = -0.335281 over 280 frames.
+FSP338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP339, best cost 23.5387 + -27.1576 = -3.61894 over 272 frames.
+FSP339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP340, best cost 27.8453 + -31.1726 = -3.32733 over 404 frames.
+FSP340 maarc maadattil mahaawiir jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP341, best cost 22.4422 + -23.6163 = -1.1741 over 227 frames.
+FSP341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP342, best cost 25.5918 + -26.5368 = -0.944954 over 310 frames.
+FSP342 muulxai illaadawan mutxtxaalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP343, best cost 29.2983 + -33.018 = -3.71972 over 339 frames.
+FSP343 tozhilil muuladanam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP344, best cost 21.2456 + -19.8391 = 1.40655 over 241 frames.
+FSP344 meejai meel eerxi ndil 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP345, best cost 26.5825 + -28.0333 = -1.45087 over 326 frames.
+FSP345 indda maiyanggalx enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP346, best cost 40.254 + -22.3011 = 17.9529 over 353 frames.
+FSP346 kalwi amaiccar weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP347, best cost 24.5216 + -28.8211 = -4.2995 over 284 frames.
+FSP347 risxikkeu roosxam adigam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP348, best cost 23.9961 + -21.9531 = 2.04308 over 280 frames.
+FSP348 lajjai enrxaal wekkam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP349, best cost 26.5253 + -29.4145 = -2.8892 over 329 frames.
+FSP349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP350, best cost 29.5743 + -27.7451 = 1.82921 over 346 frames.
+FSP350 laksxmi muga laksxanxam ulxlxa penx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP351, best cost 25.6451 + -26.1595 = -0.51442 over 281 frames.
+FSP351 widxaa muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP352, best cost 21.5565 + -20.5474 = 1.00908 over 217 frames.
+FSP352 wiitxtxil wiseesxam unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP353, best cost 24.1762 + -26.4649 = -2.28874 over 285 frames.
+FSP353 wandda wisxayattaik kuurxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP354, best cost 34.5686 + -41.3447 = -6.77605 over 436 frames.
+FSP354 en wiidi wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP355, best cost 23.9531 + -33.0675 = -9.11436 over 300 frames.
+FSP355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP356, best cost 21.098 + -23.8041 = -2.70612 over 217 frames.
+FSP356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP357, best cost 19.4852 + -17.1602 = 2.32491 over 175 frames.
+FSP357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP358, best cost 22.7623 + -28.855 = -6.09267 over 272 frames.
+FSP358 jaadi illaiyadxi paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP359, best cost 26.5821 + -27.3618 = -0.779667 over 307 frames.
+FSP359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP360, best cost 23.2259 + -29.2382 = -6.01227 over 282 frames.
+FSP360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP361, best cost 19.1141 + -17.192 = 1.92205 over 191 frames.
+FSP361 ajiiranxak koolxaarxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP362, best cost 27.161 + -30.0341 = -2.8731 over 358 frames.
+FSP362 aktxoobar iranxdxeu gaanddi jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP363, best cost 27.9605 + -27.4959 = 0.464621 over 350 frames.
+FSP363 ndiinggalx sxeemamaaga irunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP364, best cost 25.8091 + -22.0227 = 3.78638 over 304 frames.
+FSP364 togudi hetx sanddippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance FSP365, best cost 29.1404 + -29.9748 = -0.834459 over 312 frames.
+FSP365 winjnjaana walxarcci ndaatxtxeu walxarcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN293, best cost 25.1729 + -26.8929 = -1.72 over 406 frames.
+MGN293 guruwai sisxyan wanxangginaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN294, best cost 22.7775 + -24.0739 = -1.29635 over 301 frames.
+MGN294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN295, best cost 26.3155 + -28.3422 = -2.02667 over 319 frames.
+MGN295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN296, best cost 33.5285 + -38.3957 = -4.86716 over 487 frames.
+MGN296 iratxtxai suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN297, best cost 42.4727 + -31.3722 = 11.1005 over 411 frames.
+MGN297 pirenjjeu arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN298, best cost 25.9913 + -22.2825 = 3.70886 over 316 frames.
+MGN298 asuran tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN299, best cost 23.0551 + -21.95 = 1.10516 over 331 frames.
+MGN299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN300, best cost 32.7511 + -36.3453 = -3.59421 over 505 frames.
+MGN300 sutxrxeu suuzhal sugaadaaram pinpatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN301, best cost 35.0912 + -40.0428 = -4.9516 over 478 frames.
+MGN301 seewalin kuuwalil pozhudeu widxiyum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN302, best cost 31.6204 + -28.4687 = 3.15176 over 423 frames.
+MGN302 enakkeu njaabaga marxadi unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN303, best cost 29.7545 + -29.5289 = 0.225643 over 404 frames.
+MGN303 njaayirxeu widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN304, best cost 35.1758 + -33.1815 = 1.99434 over 471 frames.
+MGN304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN305, best cost 35.9975 + -36.0538 = -0.056366 over 491 frames.
+MGN305 tatruubamaaga ndadxitteuk kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN306, best cost 46.4519 + -28.8536 = 17.5983 over 441 frames.
+MGN306 iwatxrxai elxidil paartteu anjjeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN307, best cost 52.3486 + -30.3619 = 21.9868 over 327 frames.
+MGN307 manx sarinddeu kiizhee kaanxbadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN308, best cost 22.3753 + -23.9745 = -1.59913 over 284 frames.
+MGN308 malar tuuwi waazhtteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN309, best cost 31.1725 + -38.6229 = -7.45033 over 499 frames.
+MGN309 iranxdxeu pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN310, best cost 28.0435 + -27.7721 = 0.271393 over 374 frames.
+MGN310 dusxtxan dusxtxa seyal seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN311, best cost 39.2574 + -49.0639 = -9.80654 over 631 frames.
+MGN311 purxaa tuudeu anuppa tolai duuram parxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN312, best cost 35.5095 + -38.4598 = -2.95029 over 458 frames.
+MGN312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN313, best cost 25.7325 + -30.498 = -4.76557 over 365 frames.
+MGN313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN314, best cost 25.1934 + -21.2731 = 3.92033 over 362 frames.
+MGN314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN315, best cost 28.202 + -26.0338 = 2.16814 over 354 frames.
+MGN315 toosxattirxkeu parigaaram sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN316, best cost 31.0386 + -33.4399 = -2.40126 over 455 frames.
+MGN316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN317, best cost 25.8667 + -31.02 = -5.15328 over 343 frames.
+MGN317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN318, best cost 23.5505 + -24.0773 = -0.526827 over 326 frames.
+MGN318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN319, best cost 26.1309 + -29.8296 = -3.69874 over 350 frames.
+MGN319 saalaiyil ndiir ndirambiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN320, best cost 22.8813 + -21.9414 = 0.93988 over 305 frames.
+MGN320 banggalxaadeesx oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN321, best cost 30.5058 + -32.831 = -2.32518 over 413 frames.
+MGN321 een ippadxi ndoonjjaanaaga ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN322, best cost 27.8865 + -29.5912 = -1.70475 over 367 frames.
+MGN322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN323, best cost 48.0373 + -37.2519 = 10.7854 over 454 frames.
+MGN323 mannaa idil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN324, best cost 36.2321 + -48.9061 = -12.674 over 580 frames.
+MGN324 panjjaayatteu wazhakkeu mudxiweukkeu wanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN325, best cost 29.989 + -35.8587 = -5.86969 over 516 frames.
+MGN325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN326, best cost 31.7832 + -35.845 = -4.06184 over 450 frames.
+MGN326 pazhanggudxi makkalx panxbeu sirxappeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN327, best cost 48.9133 + -34.588 = 14.3253 over 452 frames.
+MGN327 kaalai bajanai mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN328, best cost 30.4508 + -33.5052 = -3.0544 over 419 frames.
+MGN328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN329, best cost 23.5302 + -15.253 = 8.27718 over 272 frames.
+MGN329 en purusxan balasaali 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN330, best cost 28.2596 + -28.2281 = 0.0314846 over 413 frames.
+MGN330 buwaneesxwar uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN331, best cost 24.5231 + -28.0691 = -3.54597 over 383 frames.
+MGN331 puurwa jenma banddam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN332, best cost 28.0681 + -33.3961 = -5.32802 over 383 frames.
+MGN332 inrxeu puujaiyil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN333, best cost 28.2337 + -34.8983 = -6.66454 over 418 frames.
+MGN333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN334, best cost 29.5928 + -32.5576 = -2.96478 over 443 frames.
+MGN334 un mugam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN335, best cost 21.842 + -26.9463 = -5.1043 over 340 frames.
+MGN335 petxtxiyai kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN336, best cost 27.4208 + -32.6352 = -5.21437 over 381 frames.
+MGN336 pooliyaana waazhkkai tawir 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN337, best cost 25.8091 + -23.8873 = 1.92183 over 354 frames.
+MGN337 raagi poosxaakkaana unxaweu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN338, best cost 25.8967 + -26.5675 = -0.670784 over 314 frames.
+MGN338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN339, best cost 23.9771 + -24.112 = -0.134884 over 275 frames.
+MGN339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN340, best cost 48.1364 + -34.4714 = 13.665 over 427 frames.
+MGN340 maaseuk maadattil mahaawiir jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN341, best cost 23.4785 + -30.1947 = -6.71618 over 321 frames.
+MGN341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN342, best cost 24.1895 + -22.3018 = 1.8877 over 301 frames.
+MGN342 muulxai illaadawan mutxtxaalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN343, best cost 32.3113 + -36.6758 = -4.36445 over 518 frames.
+MGN343 tozhilil muuladanam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN344, best cost 24.1059 + -21.4701 = 2.63583 over 330 frames.
+MGN344 meejai meel eerxi ndil 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN345, best cost 29.715 + -33.7768 = -4.06185 over 399 frames.
+MGN345 indda maiyanggalx enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN346, best cost 26.0431 + -25.8681 = 0.175062 over 365 frames.
+MGN346 makkalx raajjiyam weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN347, best cost 49.57 + -32.1112 = 17.4587 over 411 frames.
+MGN347 anjjeu poonrxa alla 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN348, best cost 25.0305 + -26.5573 = -1.52674 over 385 frames.
+MGN348 lajjai enrxaal wekkam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN349, best cost 27.6214 + -32.9849 = -5.36353 over 424 frames.
+MGN349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN350, best cost 30.3178 + -26.313 = 4.00475 over 441 frames.
+MGN350 laksxmi muga laksxanxam ulxlxa penx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN351, best cost 43.766 + -30.2643 = 13.5016 over 425 frames.
+MGN351 oor muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN352, best cost 26.2059 + -24.548 = 1.65797 over 414 frames.
+MGN352 wiitxtxil wiseesxam unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN353, best cost 24.4917 + -22.7367 = 1.75501 over 295 frames.
+MGN353 wandda wisxayattaik kuurxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN354, best cost 34.8128 + -38.2912 = -3.47839 over 485 frames.
+MGN354 en wiidi wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN355, best cost 27.7651 + -35.3294 = -7.56435 over 579 frames.
+MGN355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN356, best cost 25.5033 + -31.1024 = -5.59912 over 399 frames.
+MGN356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN357, best cost 24.1726 + -21.4999 = 2.6727 over 311 frames.
+MGN357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN358, best cost 24.924 + -28.9121 = -3.98807 over 374 frames.
+MGN358 jaadi illaiyadxi paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN359, best cost 29.8493 + -35.1845 = -5.33514 over 456 frames.
+MGN359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN360, best cost 23.6522 + -32.8182 = -9.16602 over 432 frames.
+MGN360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN361, best cost 21.8357 + -23.2362 = -1.40053 over 367 frames.
+MGN361 ajiiranxak koolxaarxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN362, best cost 31.6781 + -34.1138 = -2.43574 over 605 frames.
+MGN362 aktxoobar iranxdxeu gaanddi jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN363, best cost 29.2305 + -31.8309 = -2.60039 over 486 frames.
+MGN363 ndiinggalx sxeemamaaga irunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN364, best cost 26.139 + -24.0436 = 2.0954 over 399 frames.
+MGN364 togudi hetx sanddippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MGN365, best cost 41.9682 + -24.6737 = 17.2945 over 356 frames.
+MGN365 indda walxarcci ndaatxtxeu walxarcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA293, best cost 27.9847 + -32.1302 = -4.14547 over 390 frames.
+MKA293 guruwai sisxyan wanxangginaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA294, best cost 24.9793 + -30.617 = -5.63776 over 353 frames.
+MKA294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA295, best cost 22.868 + -27.0276 = -4.1596 over 271 frames.
+MKA295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA296, best cost 37.4836 + -41.0422 = -3.55861 over 526 frames.
+MKA296 iratxtxai suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA297, best cost 26.8758 + -29.9561 = -3.08024 over 357 frames.
+MKA297 suutxcamam arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA298, best cost 24.8743 + -19.1666 = 5.70767 over 273 frames.
+MKA298 asuran tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA299, best cost 24.812 + -34.7248 = -9.91279 over 356 frames.
+MKA299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA300, best cost 31.9078 + -35.5432 = -3.63543 over 420 frames.
+MKA300 sutxrxeu suuzhal sugaadaaram pinpatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA301, best cost 31.5752 + -26.7731 = 4.80215 over 411 frames.
+MKA301 seewalin kuuwalil pozhudeu widxiyum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA302, best cost 28.3473 + -29.5967 = -1.24939 over 351 frames.
+MKA302 enakkeu njaabaga marxadi unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA303, best cost 42.2683 + -30.829 = 11.4393 over 362 frames.
+MKA303 mazhai widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA304, best cost 35.6766 + -37.1115 = -1.43493 over 505 frames.
+MKA304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA305, best cost 36.7634 + -43.3322 = -6.56877 over 558 frames.
+MKA305 tatruubamaaga ndadxitteuk kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA306, best cost 29.8001 + -31.6117 = -1.81161 over 391 frames.
+MKA306 tii muutxtxi tii wibatteu ndadxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA307, best cost 29.8335 + -26.6747 = 3.15878 over 388 frames.
+MKA307 un seyaleukkeut tiirweu kaanxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA308, best cost 23.7155 + -21.853 = 1.86253 over 283 frames.
+MKA308 malar tuuwi waazhtteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA309, best cost 24.8428 + -21.3102 = 3.53262 over 256 frames.
+MKA309 iranxdxeu pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA310, best cost 26.6944 + -28.4445 = -1.75006 over 312 frames.
+MKA310 dusxtxan dusxtxa seyal seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA311, best cost 60.9389 + -31.0737 = 29.8652 over 502 frames.
+MKA311 onrxaam paagam ndanrxaaga waazhkirxoom wanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA312, best cost 35.9902 + -29.6763 = 6.31393 over 434 frames.
+MKA312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA313, best cost 29.3427 + -32.9516 = -3.60885 over 405 frames.
+MKA313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA314, best cost 28.5968 + -30.2706 = -1.67379 over 406 frames.
+MKA314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA315, best cost 26.2719 + -24.991 = 1.28091 over 355 frames.
+MKA315 toosxattirxkeu parigaaram sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA316, best cost 30.1765 + -27.6196 = 2.55687 over 405 frames.
+MKA316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA317, best cost 25.3028 + -28.4892 = -3.18637 over 323 frames.
+MKA317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA318, best cost 26.8569 + -29.5151 = -2.65816 over 383 frames.
+MKA318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA319, best cost 26.7501 + -29.65 = -2.8999 over 367 frames.
+MKA319 saalaiyil ndiir ndirambiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA320, best cost 24.8658 + -26.9895 = -2.12373 over 331 frames.
+MKA320 banggalxaadeesx oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA321, best cost 31.4925 + -23.4766 = 8.01591 over 417 frames.
+MKA321 een ippadxi ndoonjjaanaaga ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA322, best cost 28.2258 + -30.9224 = -2.69654 over 397 frames.
+MKA322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA323, best cost 32.2586 + -36.6455 = -4.38693 over 466 frames.
+MKA323 ndaatxtxil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA324, best cost 35.273 + -39.6607 = -4.38769 over 480 frames.
+MKA324 panjjaayatteu wazhakkeu mudxiweukkeu wanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA325, best cost 27.8453 + -29.2245 = -1.37912 over 344 frames.
+MKA325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA326, best cost 33.0448 + -36.6002 = -3.55537 over 472 frames.
+MKA326 pazhanggudxi makkalx panxbeu sirxappeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA327, best cost 31.7228 + -31.313 = 0.409765 over 437 frames.
+MKA327 kaalai bajanai migawum pirabalam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA328, best cost 33.4014 + -37.6326 = -4.23127 over 505 frames.
+MKA328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA329, best cost 27.5807 + -28.6728 = -1.0921 over 365 frames.
+MKA329 en purusxan balasaali 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA330, best cost 29.9681 + -21.2366 = 8.73149 over 402 frames.
+MKA330 buwaneesxwar uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA331, best cost 23.5234 + -25.4788 = -1.95539 over 313 frames.
+MKA331 puurwa jenma banddam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA332, best cost 26.9634 + -27.2956 = -0.332203 over 319 frames.
+MKA332 inrxeu puujaiyil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA333, best cost 29.3416 + -30.7974 = -1.45584 over 393 frames.
+MKA333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA334, best cost 27.5553 + -25.1691 = 2.38618 over 329 frames.
+MKA334 un mugam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA335, best cost 22.8459 + -19.5941 = 3.25178 over 260 frames.
+MKA335 petxtxiyai kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA336, best cost 25.9951 + -29.2167 = -3.22155 over 360 frames.
+MKA336 pooliyaana waazhkkai tawir 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA337, best cost 25.3527 + -23.0143 = 2.33846 over 323 frames.
+MKA337 raagi poosxaakkaana unxaweu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA338, best cost 25.2691 + -25.9036 = -0.634579 over 324 frames.
+MKA338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA339, best cost 25.2536 + -29.864 = -4.61043 over 359 frames.
+MKA339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA340, best cost 35.0217 + -29.7822 = 5.23951 over 476 frames.
+MKA340 maarc maadattil mahaawiir jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA341, best cost 23.0856 + -20.962 = 2.12358 over 263 frames.
+MKA341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA342, best cost 27.3312 + -30.4131 = -3.08194 over 379 frames.
+MKA342 muulxai illaadawan mutxtxaalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA343, best cost 32.0611 + -34.4718 = -2.41078 over 439 frames.
+MKA343 tozhilil muuladanam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA344, best cost 43.0133 + -27.2599 = 15.7534 over 350 frames.
+MKA344 muunrxeu meel eerxi ndil 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA345, best cost 30.1856 + -27.7334 = 2.45221 over 401 frames.
+MKA345 indda maiyanggalx enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA346, best cost 24.3573 + -21.3204 = 3.03688 over 290 frames.
+MKA346 makkalx raajjiyam weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA347, best cost 24.8481 + -18.5014 = 6.34672 over 234 frames.
+MKA347 risxikkeu roosxam adigam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA348, best cost 23.7855 + -18.9033 = 4.88224 over 275 frames.
+MKA348 lajjai enrxaal wekkam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA349, best cost 25.0864 + -23.2703 = 1.8161 over 282 frames.
+MKA349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA350, best cost 30.2418 + -26.946 = 3.29584 over 335 frames.
+MKA350 laksxmi muga laksxanxam ulxlxa penx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA351, best cost 27.282 + -25.2146 = 2.06737 over 304 frames.
+MKA351 widxaa muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA352, best cost 24.9748 + -22.3192 = 2.65564 over 289 frames.
+MKA352 wiitxtxil wiseesxam unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA353, best cost 24.8578 + -25.0492 = -0.191368 over 313 frames.
+MKA353 wandda wisxayattaik kuurxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA354, best cost 35.3577 + -35.2771 = 0.0806236 over 464 frames.
+MKA354 en wiidi wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA355, best cost 27.0743 + -30.8412 = -3.7669 over 351 frames.
+MKA355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA356, best cost 24.9783 + -25.4471 = -0.468828 over 309 frames.
+MKA356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA357, best cost 23.9952 + -25.5952 = -1.60006 over 295 frames.
+MKA357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA358, best cost 25.2094 + -35.3106 = -10.1012 over 369 frames.
+MKA358 jaadi illaiyadxi paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA359, best cost 28.5471 + -35.2819 = -6.73487 over 377 frames.
+MKA359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA360, best cost 23.577 + -26.8211 = -3.24412 over 328 frames.
+MKA360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA361, best cost 22.4136 + -14.7079 = 7.70564 over 234 frames.
+MKA361 ajiiranxak koolxaarxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA362, best cost 28.7742 + -28.723 = 0.0512772 over 353 frames.
+MKA362 aktxoobar iranxdxeu gaanddi jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA363, best cost 27.7701 + -32.1493 = -4.37919 over 360 frames.
+MKA363 ndiinggalx sxeemamaaga irunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA364, best cost 25.658 + -20.0907 = 5.5673 over 313 frames.
+MKA364 togudi hetx sanddippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MKA365, best cost 27.7712 + -25.8537 = 1.91757 over 300 frames.
+MKA365 winjnjaana walxarcci ndaatxtxeu walxarcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU293, best cost 28.1089 + -27.356 = 0.75284 over 393 frames.
+MMU293 guruwai sisxyan wanxangginaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU294, best cost 21.9367 + -17.6077 = 4.32898 over 230 frames.
+MMU294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU295, best cost 25.2624 + -30.94 = -5.67756 over 380 frames.
+MMU295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU296, best cost 35.477 + -34.5063 = 0.970757 over 450 frames.
+MMU296 iratxtxai suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU297, best cost 39.3297 + -25.6361 = 13.6936 over 353 frames.
+MMU297 ammaa arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU298, best cost 23.2284 + -20.5475 = 2.68084 over 280 frames.
+MMU298 asuran tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU299, best cost 23.5837 + -23.6947 = -0.111044 over 374 frames.
+MMU299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU300, best cost 29.9179 + -21.8855 = 8.03247 over 395 frames.
+MMU300 sutxrxeu suuzhal sugaadaaram pinpatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU301, best cost 32.292 + -32.9384 = -0.646381 over 465 frames.
+MMU301 seewalin kuuwalil pozhudeu widxiyum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU302, best cost 24.8609 + -14.6653 = 10.1956 over 268 frames.
+MMU302 enakkeu njaabaga marxadi unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU303, best cost 30.4116 + -29.4987 = 0.912933 over 428 frames.
+MMU303 njaayirxeu widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU304, best cost 35.2089 + -33.1718 = 2.03708 over 505 frames.
+MMU304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU305, best cost 36.6903 + -36.6012 = 0.0890961 over 519 frames.
+MMU305 tatruubamaaga ndadxitteuk kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU306, best cost 43.8643 + -26.3017 = 17.5625 over 425 frames.
+MMU306 singgam garjikkum tinnaadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU307, best cost 27.9515 + -27.1392 = 0.812323 over 414 frames.
+MMU307 un seyaleukkeut tiirweu kaanxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU308, best cost 22.7048 + -20.2649 = 2.43993 over 293 frames.
+MMU308 malar tuuwi waazhtteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU309, best cost 28.0547 + -24.1156 = 3.93912 over 361 frames.
+MMU309 iranxdxeu pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU310, best cost 28.7853 + -39.1729 = -10.3877 over 520 frames.
+MMU310 dusxtxan dusxtxa seyal seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU311, best cost 33.8429 + -31.6465 = 2.1964 over 420 frames.
+MMU311 purxaa tuudeu anuppa tolai duuram parxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU312, best cost 35.5759 + -29.0845 = 6.49137 over 502 frames.
+MMU312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU313, best cost 26.6776 + -30.9636 = -4.28593 over 390 frames.
+MMU313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU314, best cost 26.0388 + -25.2542 = 0.784634 over 328 frames.
+MMU314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU315, best cost 26.1851 + -16.8513 = 9.33386 over 279 frames.
+MMU315 koosxam ezhuppaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU316, best cost 30.8192 + -32.1671 = -1.34792 over 478 frames.
+MMU316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU317, best cost 24.6109 + -26.2137 = -1.60278 over 368 frames.
+MMU317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU318, best cost 24.8299 + -30.199 = -5.36917 over 417 frames.
+MMU318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU319, best cost 28.6359 + -30.4242 = -1.78824 over 442 frames.
+MMU319 saalaiyil ndiir ndirambiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU320, best cost 24.3016 + -20.5085 = 3.79318 over 321 frames.
+MMU320 banggalxaadeesx oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU321, best cost 47.0345 + -36.4035 = 10.6311 over 537 frames.
+MMU321 inrxeu mazhai ndoonjjaanaaga ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU322, best cost 24.419 + -24.2523 = 0.166677 over 323 frames.
+MMU322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU323, best cost 31.5455 + -35.7956 = -4.25011 over 444 frames.
+MMU323 ndaatxtxil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU324, best cost 32.4053 + -34.5749 = -2.16959 over 441 frames.
+MMU324 panjjaayatteu wazhakkeu mudxiweukkeu wanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU325, best cost 25.0558 + -20.1547 = 4.90109 over 288 frames.
+MMU325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU326, best cost 30.0954 + -27.493 = 2.60239 over 408 frames.
+MMU326 pazhanggudxi makkalx panxbeu sirxappeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU327, best cost 28.6456 + -19.7419 = 8.90369 over 357 frames.
+MMU327 kaalai bajanai migawum pirabalam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU328, best cost 30.1372 + -29.8334 = 0.303869 over 398 frames.
+MMU328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU329, best cost 23.1556 + -20.8737 = 2.28193 over 319 frames.
+MMU329 en purusxan balasaali 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU330, best cost 25.7806 + -25.9489 = -0.168293 over 331 frames.
+MMU330 buwaneesxwar uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU331, best cost 23.5838 + -26.6189 = -3.03512 over 339 frames.
+MMU331 puurwa jenma banddam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU332, best cost 28.8903 + -31.3112 = -2.42098 over 395 frames.
+MMU332 inrxeu puujaiyil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU333, best cost 27.4551 + -27.7117 = -0.256683 over 387 frames.
+MMU333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU334, best cost 26.106 + -25.4347 = 0.671305 over 304 frames.
+MMU334 un mugam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU335, best cost 17.528 + -10.2487 = 7.27932 over 218 frames.
+MMU335 mazhai meegam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU336, best cost 20.5144 + -13.374 = 7.14048 over 283 frames.
+MMU336 unxmaiyee peeseu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU337, best cost 27.0058 + -31.2108 = -4.20503 over 409 frames.
+MMU337 raagi poosxaakkaana unxaweu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU338, best cost 28.3949 + -29.8047 = -1.40982 over 468 frames.
+MMU338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU339, best cost 26.2815 + -29.1602 = -2.8787 over 346 frames.
+MMU339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU340, best cost 29.8426 + -22.5071 = 7.33547 over 389 frames.
+MMU340 maarc maadattil mahaawiir jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU341, best cost 24.9741 + -24.8803 = 0.0937462 over 371 frames.
+MMU341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU342, best cost 23.2512 + -23.4074 = -0.156202 over 258 frames.
+MMU342 muulxai illaadawan mutxtxaalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU343, best cost 30.5809 + -30.3777 = 0.203156 over 364 frames.
+MMU343 tozhilil muuladanam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU344, best cost 22.4266 + -14.1247 = 8.30191 over 245 frames.
+MMU344 meejai meel eerxi ndil 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU345, best cost 23.7829 + -18.6361 = 5.1468 over 329 frames.
+MMU345 ezheu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU346, best cost 24.0475 + -26.7854 = -2.73789 over 360 frames.
+MMU346 makkalx raajjiyam weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU347, best cost 40.0751 + -25.4939 = 14.5811 over 384 frames.
+MMU347 sxasxtxi roosxam adigam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU348, best cost 39.9714 + -25.3464 = 14.6249 over 345 frames.
+MMU348 jaadi enrxaal wekkam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU349, best cost 25.7567 + -27.402 = -1.6453 over 341 frames.
+MMU349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU350, best cost 32.0966 + -35.8779 = -3.78138 over 479 frames.
+MMU350 laksxmi muga laksxanxam ulxlxa penx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU351, best cost 29.2639 + -25.6784 = 3.58553 over 330 frames.
+MMU351 widxaa muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU352, best cost 23.6501 + -17.3385 = 6.31161 over 254 frames.
+MMU352 wiitxtxil wiseesxam unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU353, best cost 39.7793 + -25.4763 = 14.303 over 337 frames.
+MMU353 anggee inggee kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU354, best cost 36.17 + -30.1045 = 6.06556 over 524 frames.
+MMU354 en wiidi wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU355, best cost 27.6794 + -32.5431 = -4.86367 over 426 frames.
+MMU355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU356, best cost 24.2169 + -23.837 = 0.379881 over 330 frames.
+MMU356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU357, best cost 20.883 + -18.7712 = 2.11184 over 227 frames.
+MMU357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU358, best cost 25.0374 + -34.9707 = -9.93326 over 403 frames.
+MMU358 jaadi illaiyadxi paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU359, best cost 26.6313 + -32.7914 = -6.16008 over 375 frames.
+MMU359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU360, best cost 23.2899 + -26.6036 = -3.31373 over 345 frames.
+MMU360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU361, best cost 21.6273 + -13.3493 = 8.27805 over 226 frames.
+MMU361 ajiiranxak koolxaarxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU362, best cost 31.302 + -34.623 = -3.32099 over 481 frames.
+MMU362 aktxoobar iranxdxeu gaanddi jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU363, best cost 28.7594 + -34.0868 = -5.32743 over 458 frames.
+MMU363 ndiinggalx sxeemamaaga irunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU364, best cost 21.0752 + -14.8133 = 6.26194 over 256 frames.
+MMU364 muyarxci ndanmai tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MMU365, best cost 30.6564 + -31.7717 = -1.11521 over 434 frames.
+MMU365 winjnjaana walxarcci ndaatxtxeu walxarcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU293, best cost 25.3883 + -21.7403 = 3.6481 over 300 frames.
+MSU293 guruwai sisxyan wanxangginaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU294, best cost 24.0129 + -21.0953 = 2.91763 over 294 frames.
+MSU294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU295, best cost 24.8209 + -30.5432 = -5.72227 over 336 frames.
+MSU295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU296, best cost 31.1872 + -28.9244 = 2.26281 over 371 frames.
+MSU296 iratxtxai suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU297, best cost 27.3007 + -26.7573 = 0.543457 over 343 frames.
+MSU297 suutxcamam arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU298, best cost 21.7348 + -16.6444 = 5.09046 over 249 frames.
+MSU298 asuran tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU299, best cost 21.6996 + -15.6396 = 6.06 over 210 frames.
+MSU299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU300, best cost 30.8019 + -34.5897 = -3.78788 over 392 frames.
+MSU300 sutxrxeu suuzhal sugaadaaram pinpatxrxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU301, best cost 28.8922 + -24.9409 = 3.95126 over 359 frames.
+MSU301 seewalin kuuwalil pozhudeu widxiyum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU302, best cost 25.8044 + -21.7021 = 4.10229 over 314 frames.
+MSU302 enakkeu njaabaga marxadi unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU303, best cost 27.333 + -25.4297 = 1.90336 over 349 frames.
+MSU303 njaayirxeu widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU304, best cost 31.5341 + -28.9717 = 2.56245 over 446 frames.
+MSU304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU305, best cost 32.8818 + -25.6821 = 7.19966 over 390 frames.
+MSU305 tatruubamaaga ndadxitteuk kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU306, best cost 27.7884 + -23.3437 = 4.44467 over 323 frames.
+MSU306 tii muutxtxi tii wibatteu ndadxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU307, best cost 25.0317 + -17.0735 = 7.95822 over 252 frames.
+MSU307 un seyaleukkeut tiirweu kaanxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU308, best cost 21.1156 + -19.0009 = 2.11466 over 223 frames.
+MSU308 malar tuuwi waazhtteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU309, best cost 26.8496 + -23.0377 = 3.8119 over 307 frames.
+MSU309 iranxdxeu pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU310, best cost 26.5567 + -31.3321 = -4.77532 over 325 frames.
+MSU310 dusxtxan dusxtxa seyal seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU311, best cost 34.662 + -31.5382 = 3.12383 over 452 frames.
+MSU311 purxaa tuudeu anuppa tolai duuram parxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU312, best cost 31.4389 + -26.6146 = 4.82432 over 342 frames.
+MSU312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU313, best cost 24.6912 + -21.2036 = 3.48761 over 282 frames.
+MSU313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU314, best cost 23.9381 + -16.4165 = 7.52154 over 258 frames.
+MSU314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU315, best cost 26.3984 + -28.7284 = -2.33002 over 378 frames.
+MSU315 toosxattirxkeu parigaaram sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU316, best cost 27.6394 + -30.2916 = -2.6522 over 353 frames.
+MSU316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU317, best cost 24.8753 + -26.2698 = -1.39444 over 319 frames.
+MSU317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU318, best cost 21.7509 + -22.4848 = -0.733889 over 272 frames.
+MSU318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU319, best cost 25.3243 + -22.0628 = 3.26141 over 323 frames.
+MSU319 saalaiyil ndiir ndirambiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU320, best cost 21.9443 + -20.1895 = 1.75483 over 238 frames.
+MSU320 banggalxaadeesx oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU321, best cost 30.3293 + -29.7082 = 0.621096 over 428 frames.
+MSU321 een ippadxi ndoonjjaanaaga ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU322, best cost 23.1342 + -21.6829 = 1.45129 over 303 frames.
+MSU322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU323, best cost 29.139 + -21.9208 = 7.21824 over 379 frames.
+MSU323 ndaatxtxil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU324, best cost 25.0108 + -17.5798 = 7.43097 over 325 frames.
+MSU324 anggee inggee paarkkaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU325, best cost 25.3053 + -22.2592 = 3.0461 over 317 frames.
+MSU325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU326, best cost 26.7763 + -22.4315 = 4.34479 over 327 frames.
+MSU326 pazhanggudxi makkalx panxbeu sirxappeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU327, best cost 26.5739 + -24.758 = 1.8159 over 309 frames.
+MSU327 kaalai bajanai migawum pirabalam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU328, best cost 29.8446 + -36.5151 = -6.67051 over 407 frames.
+MSU328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU329, best cost 21.9687 + -21.6685 = 0.300198 over 254 frames.
+MSU329 en purusxan balasaali 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU330, best cost 26.228 + -26.7145 = -0.4865 over 340 frames.
+MSU330 buwaneesxwar uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU331, best cost 21.9091 + -19.6753 = 2.23378 over 240 frames.
+MSU331 puurwa jenma banddam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU332, best cost 24.3514 + -23.601 = 0.750431 over 278 frames.
+MSU332 inrxeu puujaiyil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU333, best cost 25.8572 + -23.5104 = 2.34682 over 312 frames.
+MSU333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU334, best cost 25.3879 + -19.6393 = 5.74857 over 269 frames.
+MSU334 un mugam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU335, best cost 19.2364 + -12.2113 = 7.02515 over 161 frames.
+MSU335 petxtxiyai kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU336, best cost 24.1433 + -22.8134 = 1.32988 over 289 frames.
+MSU336 pooliyaana waazhkkai tawir 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU337, best cost 24.0777 + -20.5792 = 3.49848 over 274 frames.
+MSU337 raagi poosxaakkaana unxaweu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU338, best cost 23.276 + -22.5436 = 0.73237 over 274 frames.
+MSU338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU339, best cost 20.5098 + -16.2348 = 4.27502 over 213 frames.
+MSU339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU340, best cost 40.9738 + -21.9793 = 18.9946 over 338 frames.
+MSU340 samacciir mahaawiir jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU341, best cost 22.3014 + -18.4854 = 3.81593 over 244 frames.
+MSU341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU342, best cost 22.265 + -17.5142 = 4.75077 over 240 frames.
+MSU342 muulxai illaadawan mutxtxaalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU343, best cost 27.4541 + -23.9099 = 3.54421 over 310 frames.
+MSU343 tozhilil muuladanam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU344, best cost 22.1399 + -18.2828 = 3.85704 over 228 frames.
+MSU344 meejai meel eerxi ndil 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU345, best cost 26.8538 + -23.2083 = 3.64549 over 307 frames.
+MSU345 indda maiyanggalx enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU346, best cost 22.1767 + -17.7715 = 4.40522 over 224 frames.
+MSU346 makkalx raajjiyam weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU347, best cost 23.4384 + -17.7746 = 5.66384 over 254 frames.
+MSU347 risxikkeu roosxam adigam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU348, best cost 22.8632 + -19.1454 = 3.71777 over 252 frames.
+MSU348 lajjai enrxaal wekkam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU349, best cost 25.804 + -25.4502 = 0.353775 over 296 frames.
+MSU349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU350, best cost 27.8514 + -25.6503 = 2.20114 over 326 frames.
+MSU350 laksxmi muga laksxanxam ulxlxa penx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU351, best cost 26.4373 + -20.7025 = 5.7348 over 309 frames.
+MSU351 widxaa muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU352, best cost 22.8225 + -19.588 = 3.23444 over 266 frames.
+MSU352 wiitxtxil wiseesxam unxdxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU353, best cost 25.446 + -22.4321 = 3.01392 over 300 frames.
+MSU353 wandda wisxayattaik kuurxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU354, best cost 31.8374 + -31.2819 = 0.555418 over 410 frames.
+MSU354 en wiidi wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU355, best cost 23.887 + -21.3862 = 2.5008 over 269 frames.
+MSU355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU356, best cost 22.2924 + -21.9725 = 0.31995 over 265 frames.
+MSU356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU357, best cost 22.0579 + -21.5956 = 0.462318 over 277 frames.
+MSU357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU358, best cost 21.9094 + -16.6159 = 5.29352 over 238 frames.
+MSU358 jaadi illaiyadxi paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU359, best cost 27.3129 + -23.342 = 3.97087 over 325 frames.
+MSU359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU360, best cost 21.0233 + -14.6199 = 6.40337 over 203 frames.
+MSU360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU361, best cost 20.0137 + -16.5014 = 3.51236 over 204 frames.
+MSU361 ajiiranxak koolxaarxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU362, best cost 22.022 + -16.0542 = 5.96779 over 288 frames.
+MSU362 saarxeu urxinjji arunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU363, best cost 34.6846 + -14.166 = 20.5186 over 255 frames.
+MSU363 sirxandda selwam adirsxtxam tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU364, best cost 21.1001 + -12.8175 = 8.28266 over 248 frames.
+MSU364 muyarxci ndanmai tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MSU365, best cost 28.3564 + -19.7786 = 8.57775 over 271 frames.
+MSU365 muyarxci udxaiyaar igazhcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI293, best cost 29.139 + -21.063 = 8.07602 over 427 frames.
+MVI293 unxmai kai kodxeukkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI294, best cost 22.7413 + -17.2667 = 5.4746 over 233 frames.
+MVI294 siikkiram eerxpaadxeu sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI295, best cost 24.1263 + -31.628 = -7.50166 over 288 frames.
+MVI295 siirxum paambai ndambaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI296, best cost 29.0647 + -20.0788 = 8.98596 over 288 frames.
+MVI296 iratxtxai suzhi sirxuwan seetxtxai seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI297, best cost 27.1357 + -19.3931 = 7.74255 over 293 frames.
+MVI297 suutxcamam arxinddeu seyalpadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI298, best cost 24.1694 + -20.4914 = 3.67793 over 287 frames.
+MVI298 asuran tawam irunddaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI299, best cost 25.7501 + -20.797 = 4.95309 over 292 frames.
+MVI299 kaalxi suulam eenddinaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI300, best cost 28.302 + -16.9329 = 11.369 over 329 frames.
+MVI300 un mugam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI301, best cost 29.1472 + -29.6102 = -0.462978 over 373 frames.
+MVI301 seewalin kuuwalil pozhudeu widxiyum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI302, best cost 24.306 + -15.6787 = 8.6273 over 302 frames.
+MVI302 tanggattin wilai uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI303, best cost 24.5336 + -17.2445 = 7.28916 over 243 frames.
+MVI303 njaayirxeu widxumurxai kadxai adxaippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI304, best cost 32.581 + -22.1792 = 10.4018 over 393 frames.
+MVI304 tanggalx udxaimai miideu gawanam selutteu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI305, best cost 34.4781 + -25.6208 = 8.85726 over 431 frames.
+MVI305 tatruubamaaga ndadxitteuk kaatxtxa njaanam teewai 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI306, best cost 27.4605 + -21.9116 = 5.54893 over 306 frames.
+MVI306 tii muutxtxi tii wibatteu ndadxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI307, best cost 27.0005 + -23.0105 = 3.99 over 333 frames.
+MVI307 un seyaleukkeut tiirweu kaanxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI308, best cost 19.2329 + -10.6597 = 8.57315 over 184 frames.
+MVI308 suwaril ootxtxai idxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI309, best cost 29.3176 + -23.5563 = 5.76126 over 339 frames.
+MVI309 iranxdxeu pal puunxdxeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI310, best cost 26.3024 + -18.2242 = 8.07819 over 279 frames.
+MVI310 dusxtxan dusxtxa seyal seywaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI311, best cost 34.1056 + -33.7737 = 0.331863 over 431 frames.
+MVI311 purxaa tuudeu anuppa tolai duuram parxanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI312, best cost 32.0141 + -23.6192 = 8.39487 over 326 frames.
+MVI312 manjjalx tuulx maruttuwa gunxam ndirxainddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI313, best cost 25.1024 + -25.1385 = -0.0360565 over 281 frames.
+MVI313 kutxtxaiyil tanxnxiir teenggiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI314, best cost 24.219 + -21.5938 = 2.62522 over 273 frames.
+MVI314 toonrxiya pugazhin toonrxuga 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI315, best cost 23.7891 + -15.299 = 8.4901 over 256 frames.
+MVI315 toosxattirxkeu parigaaram sey 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI316, best cost 26.8802 + -27.4327 = -0.552555 over 305 frames.
+MVI316 ndacceup pugai oosoonai baadikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI317, best cost 24.0922 + -25.9822 = -1.89003 over 280 frames.
+MVI317 paambin ndanjjeu kodxiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI318, best cost 23.31 + -25.5052 = -2.19521 over 271 frames.
+MVI318 inrxeu mazhai ndiidxikkum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI319, best cost 22.3163 + -15.7168 = 6.59942 over 231 frames.
+MVI319 saalaiyil ndiir ndirambiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI320, best cost 21.2825 + -18.6946 = 2.58794 over 208 frames.
+MVI320 banggalxaadeesx oreu ndaadxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI321, best cost 31.0716 + -27.0999 = 3.97168 over 393 frames.
+MVI321 een ippadxi ndoonjjaanaaga ireukkaan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI322, best cost 24.6231 + -21.2082 = 3.41484 over 281 frames.
+MVI322 deesiya panggeu uyarnddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI323, best cost 31.4138 + -30.4509 = 0.962978 over 386 frames.
+MVI323 ndaatxtxil tanxnxiir panjjam ndilawiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI324, best cost 31.1195 + -26.4873 = 4.63214 over 364 frames.
+MVI324 panjjaayatteu wazhakkeu mudxiweukkeu wanddadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI325, best cost 26.3057 + -23.0622 = 3.24355 over 286 frames.
+MVI325 panjjeu nderuppil karugiyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI326, best cost 32.0278 + -20.2781 = 11.7497 over 372 frames.
+MVI326 pazhanggudxi makkalx panxbeu sirxappeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI327, best cost 28.1263 + -29.5149 = -1.38856 over 320 frames.
+MVI327 kaalai bajanai migawum pirabalam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI328, best cost 28.095 + -27.3937 = 0.701305 over 293 frames.
+MVI328 indda raajaa endda baasxai peesinaar 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI329, best cost 34.8397 + -18.1071 = 16.7326 over 235 frames.
+MVI329 ndaan purusxan balasaali 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI330, best cost 25.6732 + -23.5548 = 2.11844 over 297 frames.
+MVI330 buwaneesxwar uuril puugambam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI331, best cost 27.6956 + -16.0824 = 11.6132 over 210 frames.
+MVI331 muuladanam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI332, best cost 24.0629 + -18.2713 = 5.79163 over 239 frames.
+MVI332 inrxeu puujaiyil kalanddeu kolx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI333, best cost 24.3612 + -18.6112 = 5.75002 over 255 frames.
+MVI333 pon porulx paartteu pazhagaadee 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI334, best cost 26.3671 + -19.6649 = 6.70224 over 269 frames.
+MVI334 un mugam poliwaaga ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI335, best cost 20.2382 + -16.5332 = 3.70492 over 188 frames.
+MVI335 petxtxiyai kiizhee poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI336, best cost 21.544 + -16.9471 = 4.59693 over 213 frames.
+MVI336 pooliyaana waazhkkai tawir 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI337, best cost 24.3934 + -21.9933 = 2.40012 over 281 frames.
+MVI337 raagi poosxaakkaana unxaweu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI338, best cost 23.3166 + -16.7088 = 6.6078 over 222 frames.
+MVI338 elumbeu majjai waliyadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI339, best cost 21.4023 + -23.7675 = -2.3652 over 226 frames.
+MVI339 etxtxeukkaali oreu puucci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI340, best cost 28.6364 + -21.252 = 7.38445 over 359 frames.
+MVI340 maarc maadattil mahaawiir jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI341, best cost 22.6469 + -15.6788 = 6.96802 over 226 frames.
+MVI341 miin kanxnxeukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI342, best cost 22.3988 + -16.6171 = 5.7817 over 207 frames.
+MVI342 muulxai illaadawan mutxtxaalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI343, best cost 28.0128 + -22.6279 = 5.38494 over 298 frames.
+MVI343 tozhilil muuladanam poodxa weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI344, best cost 16.7952 + -9.68723 = 7.108 over 160 frames.
+MVI344 eewuganxai eenddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI345, best cost 28.5761 + -22.6005 = 5.97558 over 305 frames.
+MVI345 indda maiyanggalx enggeu ulxlxadeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI346, best cost 20.9739 + -16.4769 = 4.49696 over 185 frames.
+MVI346 makkalx raajjiyam weenxdxum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI347, best cost 21.821 + -16.2705 = 5.55055 over 210 frames.
+MVI347 risxikkeu roosxam adigam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI348, best cost 24.0257 + -20.0515 = 3.97415 over 270 frames.
+MVI348 lajjai enrxaal wekkam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI349, best cost 26.3738 + -24.3117 = 2.06205 over 292 frames.
+MVI349 tuukkam udxaleukkeu ndalladeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI350, best cost 31.0047 + -19.1562 = 11.8485 over 347 frames.
+MVI350 laksxmi muga laksxanxam ulxlxa penx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI351, best cost 26.9957 + -21.8456 = 5.15014 over 286 frames.
+MVI351 widxaa LOG (lattice-scale[5.5.1137~1-51744]:main():lattice-scale.cc:107) Done 730 lattices.
+muyarxci walxarcci tarum 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI352, best cost 40.5048 + -18.8594 = 21.6454 over 299 frames.
+MVI352 ezhil tarum iyarxkai karumbeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI353, best cost 22.3533 + -16.3005 = 6.05286 over 214 frames.
+MVI353 wandda wisxayattaik kuurxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI354, best cost 32.0837 + -26.4454 = 5.63828 over 372 frames.
+MVI354 en wiidi wazhiyaaga sellum peerunddeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI355, best cost 25.2207 + -20.8497 = 4.37105 over 273 frames.
+MVI355 jadxai pinni weesxam poodxeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI356, best cost 21.111 + -14.9491 = 6.16185 over 187 frames.
+MVI356 janawari mudal maadam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI357, best cost 21.1558 + -17.2614 = 3.89443 over 188 frames.
+MVI357 janamee ndam balam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI358, best cost 24.3252 + -26.5693 = -2.2441 over 294 frames.
+LOG (lattice-add-penalty[5.5.1137~1-51744]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 730 lattices.
+MVI358 jaadi illaiyadxi paappaa 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI359, best cost 28.0578 + -31.2245 = -3.16666 over 316 frames.
+MVI359 waay jaalam kaatxtxum manidan 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI360, best cost 21.2036 + -18.2773 = 2.92628 over 227 frames.
+MVI360 jaalraa poodxa weenxdxaam 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI361, best cost 16.8616 + -10.5607 = 6.30089 over 152 frames.
+MVI361 sanggee muzhanggeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI362, best cost 27.4812 + -28.1373 = -0.656126 over 339 frames.
+MVI362 aktxoobar iranxdxeu gaanddi jeyanddi 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI363, best cost 26.0501 + -16.1395 = 9.91055 over 275 frames.
+MVI363 ndiinggalx sxeemamaaga irunggalx 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI364, best cost 22.6876 + -15.9515 = 6.73612 over 243 frames.
+MVI364 togudi hetx sanddippeu 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:99) For utterance MVI365, best cost 29.1798 + -23.032 = 6.14775 over 328 frames.
+MVI365 winjnjaana walxarcci ndaatxtxeu walxarcci 
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:124) Overall cost per frame is 0.0062544 = 0.0816928 [graph] + -0.0754384 [acoustic] over 262211 frames.
+LOG (lattice-best-path[5.5.1137~1-51744]:main():lattice-best-path.cc:128) Done 730 lattices, failed for 0
+# Accounting: time=2 threads=1
+# Ended (code 0) at Wed Aug 28 07:52:07 IST 2024, elapsed time 2 seconds

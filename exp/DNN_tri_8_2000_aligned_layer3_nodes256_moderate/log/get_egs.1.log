@@ -1,0 +1,88 @@
+# nnet-get-egs --left-context=4 --right-context=4 "ark,s,cs:utils/filter_scp.pl --exclude exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/valid_uttlist data/train/split4/1/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:- ark:- |" "ark,s,cs:gunzip -c exp_FG/tri_8_2000_ali/ali.1.gz | ali-to-pdf exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- | ali-to-post ark:- ark:- |" ark:- | nnet-copy-egs ark:- ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.1.1.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.2.1.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.3.1.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.4.1.ark 
+# Started at Wed Aug 28 00:15:16 IST 2024
+#
+nnet-get-egs --left-context=4 --right-context=4 'ark,s,cs:utils/filter_scp.pl --exclude exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/valid_uttlist data/train/split4/1/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:- ark:- |' 'ark,s,cs:gunzip -c exp_FG/tri_8_2000_ali/ali.1.gz | ali-to-pdf exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- | ali-to-post ark:- ark:- |' ark:- 
+nnet-copy-egs ark:- ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.1.1.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.2.1.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.3.1.ark ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs_orig.4.1.ark 
+apply-cmvn --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:- ark:- 
+ali-to-pdf exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- 
+ali-to-post ark:- ark:- 
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL1775
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL1833
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL1845
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL1975
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL1981
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2027
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2028
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2029
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2124
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2134
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2154
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2159
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2186
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2190
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2231
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2232
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2241
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2262
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2264
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2294
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2306
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2314
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2322
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2367
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2383
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2385
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2414
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2422
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2424
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2443
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2475
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2476
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2480
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2482
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2488
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2489
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2490
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2491
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2492
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2498
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2504
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2513
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2532
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2535
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2554
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2571
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2572
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2579
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2582
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2585
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2589
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2607
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2636
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2641
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2647
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2666
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2686
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2695
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2706
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2708
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2714
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2752
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2755
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2757
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2760
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FDH2007
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FDH2393
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FDH2437
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FDH2476
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FDH2509
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FDH2588
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FDH2636
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FDH2756
+LOG (ali-to-pdf[5.5.1137~1-51744]:main():ali-to-pdf.cc:68) Converted 6424 alignments to pdf sequences.
+LOG (ali-to-post[5.5.1137~1-51744]:main():ali-to-post.cc:73) Converted 6424 alignments.
+LOG (apply-cmvn[5.5.1137~1-51744]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 6423 utterances, errors on 0
+LOG (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:174) Finished generating examples, successfully processed 6350 feature files, wrote 2059912 examples,  with 2059912 egs in total; 73 files had errors.
+LOG (nnet-copy-egs[5.5.1137~1-51744]:main():nnet-copy-egs.cc:170) Read 2059912 neural-network training examples, wrote 2059912
+# Accounting: time=65 threads=1
+# Ended (code 0) at Wed Aug 28 00:16:21 IST 2024, elapsed time 65 seconds

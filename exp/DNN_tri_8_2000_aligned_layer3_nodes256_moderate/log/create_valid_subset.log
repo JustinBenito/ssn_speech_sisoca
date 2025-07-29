@@ -1,0 +1,20 @@
+# nnet-get-egs --left-context=4 --right-context=4 "ark,s,cs:utils/filter_scp.pl exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/valid_uttlist data/train/feats.scp | apply-cmvn  --utt2spk=ark:data/train/utt2spk scp:data/train/cmvn.scp scp:- ark:- |" "ark,s,cs:gunzip -c exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/ali_special.gz | ali-to-pdf exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- | ali-to-post ark:- ark:- |" ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/valid_all.egs 
+# Started at Wed Aug 28 00:15:13 IST 2024
+#
+nnet-get-egs --left-context=4 --right-context=4 'ark,s,cs:utils/filter_scp.pl exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/valid_uttlist data/train/feats.scp | apply-cmvn  --utt2spk=ark:data/train/utt2spk scp:data/train/cmvn.scp scp:- ark:- |' 'ark,s,cs:gunzip -c exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/ali_special.gz | ali-to-pdf exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- | ali-to-post ark:- ark:- |' ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/valid_all.egs 
+apply-cmvn --utt2spk=ark:data/train/utt2spk scp:data/train/cmvn.scp scp:- ark:- 
+ali-to-post ark:- ark:- 
+ali-to-pdf exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- 
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key FBL2379
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key MGN2130
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key MGN2143
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key MGN2192
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key MGN2493
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key MGN2571
+WARNING (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:156) No pdf-level posterior for key MGN2681
+LOG (ali-to-pdf[5.5.1137~1-51744]:main():ali-to-pdf.cc:68) Converted 588 alignments to pdf sequences.
+LOG (ali-to-post[5.5.1137~1-51744]:main():ali-to-post.cc:73) Converted 588 alignments.
+LOG (apply-cmvn[5.5.1137~1-51744]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 300 utterances, errors on 0
+LOG (nnet-get-egs[5.5.1137~1-51744]:main():nnet-get-egs.cc:174) Finished generating examples, successfully processed 293 feature files, wrote 85674 examples,  with 85674 egs in total; 7 files had errors.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Wed Aug 28 00:15:14 IST 2024, elapsed time 1 seconds

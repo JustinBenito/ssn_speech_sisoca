@@ -1,0 +1,52 @@
+# nnet3-xvector-compute --use-gpu=no --min-chunk-size=25 --chunk-size=10000 --cache-capacity=64 "nnet3-copy --nnet-config=exp/xvector_nnet_1a/extract.config exp/xvector_nnet_1a/final.raw - |" "ark:apply-cmvn-sliding --norm-vars=false --center=true --cmn-window=300 scp:dump/mfcc/test/split1/1/feats.scp ark:- | select-voiced-frames ark:- scp,s,cs:dump/mfcc/test/split1/1/vad.scp ark:- |" ark,scp:dump/xvector/test/xvector.1.ark,dump/xvector/test/xvector.1.scp 
+# Started at Fri May 31 12:57:22 IST 2024
+#
+nnet3-xvector-compute --use-gpu=no --min-chunk-size=25 --chunk-size=10000 --cache-capacity=64 'nnet3-copy --nnet-config=exp/xvector_nnet_1a/extract.config exp/xvector_nnet_1a/final.raw - |' 'ark:apply-cmvn-sliding --norm-vars=false --center=true --cmn-window=300 scp:dump/mfcc/test/split1/1/feats.scp ark:- | select-voiced-frames ark:- scp,s,cs:dump/mfcc/test/split1/1/vad.scp ark:- |' ark,scp:dump/xvector/test/xvector.1.ark,dump/xvector/test/xvector.1.scp 
+nnet3-copy --nnet-config=exp/xvector_nnet_1a/extract.config exp/xvector_nnet_1a/final.raw - 
+WARNING (nnet3-copy[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn6.relu is never used to compute any output.
+WARNING (nnet3-copy[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn6.batchnorm is never used to compute any output.
+WARNING (nnet3-copy[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn7.affine is never used to compute any output.
+WARNING (nnet3-copy[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn7.relu is never used to compute any output.
+WARNING (nnet3-copy[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn7.batchnorm is never used to compute any output.
+WARNING (nnet3-copy[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node output.affine is never used to compute any output.
+WARNING (nnet3-copy[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node output.log-softmax is never used to compute any output.
+LOG (nnet3-copy[5.5.1126~1-8c451]:main():nnet3-copy.cc:123) Copied raw neural net from exp/xvector_nnet_1a/final.raw to -
+WARNING (nnet3-xvector-compute[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn6.relu is never used to compute any output.
+WARNING (nnet3-xvector-compute[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn6.batchnorm is never used to compute any output.
+WARNING (nnet3-xvector-compute[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn7.affine is never used to compute any output.
+WARNING (nnet3-xvector-compute[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn7.relu is never used to compute any output.
+WARNING (nnet3-xvector-compute[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node tdnn7.batchnorm is never used to compute any output.
+WARNING (nnet3-xvector-compute[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node output.affine is never used to compute any output.
+WARNING (nnet3-xvector-compute[5.5.1126~1-8c451]:Check():nnet-nnet.cc:789) Node output.log-softmax is never used to compute any output.
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 7 orphan nodes.
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 7 orphan components.
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:Collapse():nnet-utils.cc:1488) Added 0 components, removed 7
+select-voiced-frames ark:- scp,s,cs:dump/mfcc/test/split1/1/vad.scp ark:- 
+apply-cmvn-sliding --norm-vars=false --center=true --cmn-window=300 scp:dump/mfcc/test/split1/1/feats.scp ark:- 
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_117, using chunk size  of 76
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_118, using chunk size  of 55
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_119, using chunk size  of 67
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_12, using chunk size  of 195
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_120, using chunk size  of 63
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_121, using chunk size  of 68
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_122, using chunk size  of 70
+LOG (apply-cmvn-sliding[5.5.1126~1-8c451]:main():apply-cmvn-sliding.cc:75) Applied sliding-window cepstral mean normalization to 20 utterances, 0 had errors.
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_123, using chunk size  of 65
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_124, using chunk size  of 57
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_125, using chunk size  of 62
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_126, using chunk size  of 69
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_127, using chunk size  of 71
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_128, using chunk size  of 50
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_129, using chunk size  of 54
+LOG (select-voiced-frames[5.5.1126~1-8c451]:main():select-voiced-frames.cc:106) Done selecting voiced frames; processed 20 utterances, 0 had errors.
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_13, using chunk size  of 181
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_130, using chunk size  of 63
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_131, using chunk size  of 63
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_132, using chunk size  of 58
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_133, using chunk size  of 68
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:182) Chunk size of 10000 is greater than the number of rows in utterance: FAM_134, using chunk size  of 48
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:238) Time taken 4.77201s: real-time factor assuming 100 frames/sec is 0.317499
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:main():nnet3-xvector-compute.cc:241) Done 20 utterances, failed for 0
+LOG (nnet3-xvector-compute[5.5.1126~1-8c451]:~CachingOptimizingCompiler():nnet-optimize.cc:710) 4.43 seconds taken in nnet3 compilation total (breakdown: 4.36 compilation, 0.00835 optimization, 0 shortcut expansion, 0.00174 checking, 2.15e-06 computing indexes, 0.0529 misc.) + 0 I/O.
+# Accounting: time=5 threads=1
+# Ended (code 0) at Fri May 31 12:57:27 IST 2024, elapsed time 5 seconds

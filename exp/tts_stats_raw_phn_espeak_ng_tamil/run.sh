@@ -1,0 +1,1 @@
+./tts.sh --feats_type raw --fs 16000 --n_fft 1024 --n_shift 256 --win_length null --token_type phn --g2p espeak_ng_tamil --cleaner none --train_config conf/train.yaml --inference_config conf/decode.yaml --train_set train --valid_set valid --test_sets test --srctexts data/train/text --use_xvector true --audio_format wav --stage 2 --stop-stage 5 --stage 5 "$@"; exit $?

@@ -1,0 +1,11 @@
+# nnet-shuffle-egs --buffer-size=5000 --srand=25 ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs.1.7.ark ark:- | nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=25 exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/25.mdl ark:- exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/26.1.mdl 
+# Started at Wed Aug 28 00:42:49 IST 2024
+#
+nnet-shuffle-egs --buffer-size=5000 --srand=25 ark:exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/egs/egs.1.7.ark ark:- 
+nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=25 exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/25.mdl ark:- exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/26.1.mdl 
+LOG (nnet-shuffle-egs[5.5.1137~1-51744]:main():nnet-shuffle-egs.cc:104) Shuffled order of 182942 neural-network training examples using a buffer (partial randomization)
+LOG (nnet-train-parallel[5.5.1137~1-51744]:DoBackpropParallel():nnet-update-parallel.cc:194) Did backprop on 182942 examples, average log-prob per frame is -2.84008
+LOG (nnet-train-parallel[5.5.1137~1-51744]:DoBackpropParallel():nnet-update-parallel.cc:196) [this line is to be parsed by a script:] log-prob-per-frame=-2.84008
+LOG (nnet-train-parallel[5.5.1137~1-51744]:main():nnet-train-parallel.cc:102) Finished training, processed 182942 training examples (weighted).  Wrote model to exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/26.1.mdl
+# Accounting: time=63 threads=1
+# Ended (code 0) at Wed Aug 28 00:43:52 IST 2024, elapsed time 63 seconds

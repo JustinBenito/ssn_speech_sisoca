@@ -1,0 +1,65 @@
+# ali-to-post "ark:gunzip -c exp_FG/tri_8_2000_ali/ali.1.gz|" ark:- | weight-silence-post 0.0 1:2:3:4:5 exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- | acc-lda --rand-prune=4.0 exp_FG/tri_8_2000_ali/final.mdl "ark,s,cs:utils/subset_scp.pl --quiet 2500 data/train/split4/1/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:- ark:- | splice-feats --left-context=4 --right-context=4 ark:- ark:- |" ark,s,cs:- exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/lda.1.acc 
+# Started at Wed Aug 28 00:15:02 IST 2024
+#
+acc-lda --rand-prune=4.0 exp_FG/tri_8_2000_ali/final.mdl 'ark,s,cs:utils/subset_scp.pl --quiet 2500 data/train/split4/1/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:- ark:- | splice-feats --left-context=4 --right-context=4 ark:- ark:- |' ark,s,cs:- exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/lda.1.acc 
+weight-silence-post 0.0 1:2:3:4:5 exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- 
+ali-to-post 'ark:gunzip -c exp_FG/tri_8_2000_ali/ali.1.gz|' ark:- 
+splice-feats --left-context=4 --right-context=4 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:- ark:- 
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 100 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 200 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 300 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 400 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 500 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 600 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 700 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 800 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 900 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1000 utterances.
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL1775
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1100 utterances.
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2028
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2124
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2159
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2186
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2232
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2241
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2264
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1200 utterances.
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2385
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2414
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2424
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2476
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2488
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2490
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2504
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2513
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1300 utterances.
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2554
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2582
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2585
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2607
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2636
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2641
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FBL2666
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1400 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1500 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1600 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1700 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1800 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 1900 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 2000 utterances.
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FDH2437
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 2100 utterances.
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FDH2509
+WARNING (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:77) No posteriors for utterance FDH2588
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 2200 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 2300 utterances.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:114) Done 2400 utterances.
+LOG (ali-to-post[5.5.1137~1-51744]:main():ali-to-post.cc:73) Converted 6424 alignments.
+LOG (apply-cmvn[5.5.1137~1-51744]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 2500 utterances, errors on 0
+LOG (weight-silence-post[5.5.1137~1-51744]:main():weight-silence-post.cc:95) Done 6424 posteriors.
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:117) Done 2474 files, failed for 26
+LOG (acc-lda[5.5.1137~1-51744]:main():acc-lda.cc:122) Written statistics.
+# Accounting: time=6 threads=1
+# Ended (code 0) at Wed Aug 28 00:15:08 IST 2024, elapsed time 6 seconds

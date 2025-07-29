@@ -1,0 +1,20 @@
+# compute-mfcc-feats --write-utt2dur=ark,t:dump/mfcc/train/log/utt2dur.32 --verbose=2 --config=conf/mfcc.conf scp,p:dump/mfcc/train/log/wav_train.32.scp ark:- | copy-feats --write-num-frames=ark,t:dump/mfcc/train/log/utt2num_frames.32 --compress=true ark:- ark,scp:/home/ssn/rachel/espnet/egs2/tamil_tts_finetune/tts1/dump/mfcc/train/data/raw_mfcc_train.32.ark,/home/ssn/rachel/espnet/egs2/tamil_tts_finetune/tts1/dump/mfcc/train/data/raw_mfcc_train.32.scp 
+# Started at Fri May 31 12:56:07 IST 2024
+#
+copy-feats --write-num-frames=ark,t:dump/mfcc/train/log/utt2num_frames.32 --compress=true ark:- ark,scp:/home/ssn/rachel/espnet/egs2/tamil_tts_finetune/tts1/dump/mfcc/train/data/raw_mfcc_train.32.ark,/home/ssn/rachel/espnet/egs2/tamil_tts_finetune/tts1/dump/mfcc/train/data/raw_mfcc_train.32.scp 
+compute-mfcc-feats --write-utt2dur=ark,t:dump/mfcc/train/log/utt2dur.32 --verbose=2 --config=conf/mfcc.conf scp,p:dump/mfcc/train/log/wav_train.32.scp ark:- 
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_90
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_91
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_92
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_93
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_94
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_95
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_96
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_97
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_98
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:181) Processed 10 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_99
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:185)  Done 10 out of 10 utterances.
+LOG (copy-feats[5.5.1126~1-8c451]:main():copy-feats.cc:143) Copied 10 feature matrices.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Fri May 31 12:56:07 IST 2024, elapsed time 0 seconds

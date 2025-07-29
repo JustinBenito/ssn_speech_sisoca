@@ -1,0 +1,23 @@
+# ali-to-post "ark:gunzip -c exp_FG/tri_8_2000_ali/ali.2.gz|" ark:- | weight-silence-post 0.0 1:2:3:4:5 exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- | acc-lda --rand-prune=4.0 exp_FG/tri_8_2000_ali/final.mdl "ark,s,cs:utils/subset_scp.pl --quiet 5000 data/train/split2/2/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split2/2/utt2spk scp:data/train/split2/2/cmvn.scp scp:- ark:- | splice-feats --left-context=4 --right-context=4 ark:- ark:- |" ark,s,cs:- exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/lda.2.acc 
+# Started at Mon Jul  8 09:45:11 IST 2024
+#
+weight-silence-post 0.0 1:2:3:4:5 exp_FG/tri_8_2000_ali/final.mdl ark:- ark:- 
+acc-lda --rand-prune=4.0 exp_FG/tri_8_2000_ali/final.mdl 'ark,s,cs:utils/subset_scp.pl --quiet 5000 data/train/split2/2/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split2/2/utt2spk scp:data/train/split2/2/cmvn.scp scp:- ark:- | splice-feats --left-context=4 --right-context=4 ark:- ark:- |' ark,s,cs:- exp_FG/DNN_tri_8_2000_aligned_layer3_nodes256/lda.2.acc 
+ali-to-post 'ark:gunzip -c exp_FG/tri_8_2000_ali/ali.2.gz|' ark:- 
+apply-cmvn --utt2spk=ark:data/train/split2/2/utt2spk scp:data/train/split2/2/cmvn.scp scp:- ark:- 
+splice-feats --left-context=4 --right-context=4 ark:- ark:- 
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:114) Done 100 utterances.
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:114) Done 200 utterances.
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:114) Done 300 utterances.
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:114) Done 400 utterances.
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:114) Done 500 utterances.
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:114) Done 600 utterances.
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:114) Done 700 utterances.
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:114) Done 800 utterances.
+LOG (ali-to-post[5.5.1139~1-67548]:main():ali-to-post.cc:73) Converted 876 alignments.
+LOG (weight-silence-post[5.5.1139~1-67548]:main():weight-silence-post.cc:95) Done 876 posteriors.
+LOG (apply-cmvn[5.5.1139~1-67548]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 876 utterances, errors on 0
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:117) Done 876 files, failed for 0
+LOG (acc-lda[5.5.1139~1-67548]:main():acc-lda.cc:122) Written statistics.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Mon Jul  8 09:45:12 IST 2024, elapsed time 1 seconds

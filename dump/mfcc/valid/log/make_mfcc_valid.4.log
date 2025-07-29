@@ -1,0 +1,10 @@
+# compute-mfcc-feats --write-utt2dur=ark,t:dump/mfcc/valid/log/utt2dur.4 --verbose=2 --config=conf/mfcc.conf scp,p:dump/mfcc/valid/log/wav_valid.4.scp ark:- | copy-feats --write-num-frames=ark,t:dump/mfcc/valid/log/utt2num_frames.4 --compress=true ark:- ark,scp:/home/ssn/rachel/espnet/egs2/tamil_tts_finetune/tts1/dump/mfcc/valid/data/raw_mfcc_valid.4.ark,/home/ssn/rachel/espnet/egs2/tamil_tts_finetune/tts1/dump/mfcc/valid/data/raw_mfcc_valid.4.scp 
+# Started at Fri May 31 12:57:12 IST 2024
+#
+copy-feats --write-num-frames=ark,t:dump/mfcc/valid/log/utt2num_frames.4 --compress=true ark:- ark,scp:/home/ssn/rachel/espnet/egs2/tamil_tts_finetune/tts1/dump/mfcc/valid/data/raw_mfcc_valid.4.ark,/home/ssn/rachel/espnet/egs2/tamil_tts_finetune/tts1/dump/mfcc/valid/data/raw_mfcc_valid.4.scp 
+compute-mfcc-feats --write-utt2dur=ark,t:dump/mfcc/valid/log/utt2dur.4 --verbose=2 --config=conf/mfcc.conf scp,p:dump/mfcc/valid/log/wav_valid.4.scp ark:- 
+VLOG[2] (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:182) Processed features for key FAM_101
+LOG (compute-mfcc-feats[5.5.1126~1-8c451]:main():compute-mfcc-feats.cc:185)  Done 1 out of 1 utterances.
+LOG (copy-feats[5.5.1126~1-8c451]:main():copy-feats.cc:143) Copied 1 feature matrices.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Fri May 31 12:57:12 IST 2024, elapsed time 0 seconds
