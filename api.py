@@ -7,6 +7,9 @@ import base64
 from synthapi import synthesize_tamil  # Import the synthesizer
 import shutil
 
+# Dynamically determine the base directory of the app
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 app = FastAPI()
 
 # Add CORS middleware to allow requests from any origin
@@ -33,7 +36,7 @@ def runs(command: str, cwd: str = None):
         return {"error": f"Error: {e.stderr}"}
 
 # Define the directory where files will be saved
-UPLOAD_DIRECTORY = "/home/sltlab/kaldi/egs/SISOCADEMO"
+UPLOAD_DIRECTORY = os.path.join(BASE_DIR, "uploads")
 
 # Ensure that the directory exists
 if not os.path.exists(UPLOAD_DIRECTORY):
@@ -50,33 +53,39 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
         with open(file_location, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
 
+        # Dynamically resolve script and config paths
+        espnet_tools_dir = os.path.join(BASE_DIR, "opt", "espnet", "tools")
+        kaldi_egs_dir = os.path.join(BASE_DIR)
+        # If your kaldi/egs directory is not the app root, adjust accordingly
+
         # Activate virtual environment and run Kaldi commands
-        activate_venv = runs("source activate_python.sh", cwd="/home/sltlab/espnet/tools")
+        activate_venv = runs("source activate_python.sh", cwd=espnet_tools_dir)
         pyversion = runs('python3 --version')
-        cmd_source = runs("source cmd.sh", cwd="/home/sltlab/kaldi/egs/SISOCADEMO/")
-        path_try = runs("source path_try.sh", cwd="/home/sltlab/kaldi/egs/SISOCADEMO")
+        cmd_source = runs("source cmd.sh", cwd=kaldi_egs_dir)
+        path_try = runs("source path_try.sh", cwd=kaldi_egs_dir)
 
         # Ensure the main Kaldi script is executable
         if severity == 'moderate':
-            main_script_path = '/home/sltlab/kaldi/egs/SISOCADEMO/main_run.sh'
+            main_script_path = os.path.join(kaldi_egs_dir, 'main_run.sh')
             ensure_executable(main_script_path)
         else: # In case of mild
-            main_script_path = '/home/sltlab/kaldi/egs/SISOCADEMO/main_run_mild.sh'
+            main_script_path = os.path.join(kaldi_egs_dir, 'main_run_mild.sh')
             ensure_executable(main_script_path)
 
         # Run the Kaldi script, passing the uploaded file as an argument
         run_main = subprocess.run(
             ["/bin/bash", main_script_path, file.filename],
-            cwd='/home/sltlab/kaldi/egs/SISOCADEMO/',
+            cwd=kaldi_egs_dir,
             capture_output=True, text=True
         )
 
         # Check if output.txt exists before proceeding
-        if not os.path.exists("output.txt"):
+        output_txt_path = os.path.join(kaldi_egs_dir, "output.txt")
+        if not os.path.exists(output_txt_path):
             raise HTTPException(status_code=404, detail="Output file not found.")
         
         # Read and process output.txt
-        with open("output.txt", "r") as file:
+        with open(output_txt_path, "r") as file:
             content = file.read()
         cnt = content.split(" ")
         speaker = cnt[0][:3]  # Extract the speaker part
@@ -87,7 +96,8 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
         synth = synthesize_tamil(texts)
 
         # Build the new translated text
-        with open('pronuncing_dictionary') as f:
+        pron_dict_path = os.path.join(kaldi_egs_dir, 'pronuncing_dictionary')
+        with open(pron_dict_path) as f:
             lines = f.readlines()
 
         d = {}
@@ -102,7 +112,7 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
                 new_text += d.get(word, word) + ' '
 
         # Check if the output WAV file exists
-        output_file_path = "/home/sltlab/kaldi/egs/SISOCADEMO/test.wav"
+        output_file_path = os.path.join(kaldi_egs_dir, "test.wav")
         if not os.path.exists(output_file_path):
             raise HTTPException(status_code=404, detail="Output WAV file not found.")
 
