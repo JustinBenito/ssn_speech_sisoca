@@ -1,13 +1,23 @@
-# Use Ubuntu 22.04 as base
 FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
 
-# 1. Install system dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential git wget sox python3 python3-pip python3-venv \
+# Use more reliable mirror
+RUN sed -i 's|http://.*.ubuntu.com|http://mirror.math.princeton.edu/pub/ubuntu|g' /etc/apt/sources.list
+
+# Clean and update
+RUN rm -rf /var/lib/apt/lists/* && apt-get clean && \
+    apt-get update && apt-get install -y software-properties-common && \
+    add-apt-repository universe && \
+    apt-get update
+
+# Install system dependencies
+RUN apt-get install -y \
+    build-essential git wget python3 python3-pip python3-venv \
     libatlas-base-dev libboost-all-dev zlib1g-dev automake autoconf \
     libtool subversion gfortran cmake libopenblas-dev liblapack-dev \
-    libsndfile1-dev sox ffmpeg curl ca-certificates unzip && \
+    libsndfile1-dev ffmpeg curl ca-certificates unzip && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # 2. Install Kaldi
 WORKDIR /opt

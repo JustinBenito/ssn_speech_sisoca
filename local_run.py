@@ -4,7 +4,7 @@ import subprocess
 import os
 from fastapi.middleware.cors import CORSMiddleware
 import base64
-from synthapi import synthesize_tamil  # Import the synthesizer
+# from synthapi import synthesize_tamil  # Import the synthesizer
 import shutil
 
 # Dynamically determine the base directory of the app
@@ -54,15 +54,15 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
             shutil.copyfileobj(file.file, buffer)
 
         # Dynamically resolve script and config paths
-        espnet_tools_dir = os.path.join(BASE_DIR, "opt", "espnet", "tools")
-        kaldi_egs_dir = os.path.join(BASE_DIR)
+        # espnet_tools_dir = os.path.join("/home/ssn/espnet/tools")
+        kaldi_egs_dir = os.path.join("/home/ssn/kaldi/egs/SISOCADEMO")
         # If your kaldi/egs directory is not the app root, adjust accordingly
 
         # Activate virtual environment and run Kaldi commands
-        activate_venv = runs("source activate_python.sh", cwd=espnet_tools_dir)
+        # activate_venv = runs("source activate_python.sh", cwd=espnet_tools_dir)
         pyversion = runs('python3 --version')
-        cmd_source = runs("source cmd.sh", cwd=kaldi_egs_dir)
-        path_try = runs("source path_try.sh", cwd=kaldi_egs_dir)
+        # cmd_source = runs("source cmd.sh", cwd=kaldi_egs_dir)
+        # path_try = runs("source path_try.sh", cwd=kaldi_egs_dir)
 
         # Ensure the main Kaldi script is executable
         if severity == 'moderate':
@@ -95,10 +95,10 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
         text = cnt[1:]
         texts = " ".join(text)
 
-        # Call the Tamil synthesizer API
-        synth = synthesize_tamil(texts)
+        # # Call the Tamil synthesizer API
+        # synth = synthesize_tamil(texts)
 
-        # Build the new translated text
+        # # Build the new translated text
         pron_dict_path = os.path.join(kaldi_egs_dir, 'pronuncing_dictionary')
         with open(pron_dict_path) as f:
             lines = f.readlines()

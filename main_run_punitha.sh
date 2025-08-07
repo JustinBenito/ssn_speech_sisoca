@@ -16,6 +16,7 @@ else
 fi
 
 aplay "$input_wav_path"
+
 echo "$input_wav_path"
 
 rm -rf ./mfcc
@@ -23,12 +24,8 @@ rm -rf ./wav_test
 rm -rf ./output_MONO.txt
 rm -rf ./test_one
 
-
-
 mkdir -p test_one
 mkdir -p wav_test
-
-
 
 last_part=$(echo "$input_wav_path" | rev | cut -d'/' -f1 | rev)
 base_name=$(basename "$last_part" .wav)
@@ -59,21 +56,22 @@ echo ""
 #decode using monophone GMM-HMM
 
 steps/nnet2/decode.sh --cmd "run.pl" --nj "1" \
- exp/tri_8_2000_mild/graph test_one \
-  exp/DNN_tri_8_2000_aligned_layer3_nodes256_mild/decode | tee exp/DNN_tri_8_2000_aligned_layer3_nodes256_mild/decode/decode.log
+ exp/tri_8_2000_punitha/graph test_one \
+  exp/DNN_tri_8_2000_aligned_layer3_nodes256_punitha/decode | tee exp/DNN_tri_8_2000_aligned_layer3_nodes256_punitha/decode/decode.log
 
 #Store the decoded result
 
-grep -h -Ev '^(#|nnet|LOG|apply|gmm|add|latgen-faster-mapped|copy|WARNING)' exp/DNN_tri_8_2000_aligned_layer3_nodes256_mild/decode/log/decode.1.log > output.txt
+grep -h -Ev '^(#|nnet|LOG|apply|gmm|add|latgen-faster-mapped|copy|WARNING)' exp/DNN_tri_8_2000_aligned_layer3_nodes256_punitha/decode/log/decode.1.log > output.txt
 #cat output.txt
 
-log_filter=$(grep -h -Ev '^(#|nnet|LOG|apply|gmm|add|latgen-faster-mapped|copy|WARNING)' exp/DNN_tri_8_2000_aligned_layer3_nodes256_mild/decode/log/decode.1.log)
+log_filter=$(grep -h -Ev '^(#|nnet|LOG|apply|gmm|add|latgen-faster-mapped|copy|WARNING)' exp/DNN_tri_8_2000_aligned_layer3_nodes256_punitha/decode/log/decode.1.log)
 
 var2=$(echo "$log_filter" | cut -d ' ' -f 2-)
 echo "$var2"  
 
-#python3 synthesize.py "$var2" $spk
+#python synthesize.py "$var2" $spk
 
+#python3 synthesize_CONTROL.py "$var2"
 python3 tamil_trans.py to_tamil "$var2" > tamil_text
 
 tam_tex=$(cat tamil_text)

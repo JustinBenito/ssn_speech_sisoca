@@ -71,6 +71,13 @@ echo "$var2"
 
 #python synthesize.py "$var2" $spk
 
-python3 synthesize_CONTROL.py "$var2"
+#python3 synthesize_CONTROL.py "$var2"
+python3 tamil_trans.py to_tamil "$var2" > tamil_text
 
+tam_tex=$(cat tamil_text)
+echo ""
+echo "Tamil text: $tam_tex"
+echo ""
+
+python3 synthesize_CONTROL.py "$tam_tex"
 #aplay test.wav 

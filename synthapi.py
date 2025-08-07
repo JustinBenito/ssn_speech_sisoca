@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-sys.path.append('/home/sltlab/espnet/')
+sys.path.append('/home/ssn/espnet/')
 
 
 import sys
