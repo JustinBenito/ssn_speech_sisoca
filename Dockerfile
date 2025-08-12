@@ -1,56 +1,52 @@
 FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
 
-# Use more reliable mirror
-RUN sed -i 's|http://.*.ubuntu.com|http://mirror.math.princeton.edu/pub/ubuntu|g' /etc/apt/sources.list
+# 1. System deps
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        build-essential g++ gfortran make automake autoconf libtool \
+        bzip2 unzip wget sox git python3 python3-pip python3-venv \
+        zlib1g-dev ca-certificates patch libatlas-base-dev libboost-all-dev \
+        libsndfile1-dev ffmpeg curl subversion cmake libopenblas-dev liblapack-dev \
+        python-is-python3 && \
+    rm -rf /var/lib/apt/lists/*
 
-# Clean and update
-RUN rm -rf /var/lib/apt/lists/* && apt-get clean && \
-    apt-get update && apt-get install -y software-properties-common && \
-    add-apt-repository universe && \
-    apt-get update
-
-# Install system dependencies
-RUN apt-get install -y \
-    build-essential git wget python3 python3-pip python3-venv \
-    libatlas-base-dev libboost-all-dev zlib1g-dev automake autoconf \
-    libtool subversion gfortran cmake libopenblas-dev liblapack-dev \
-    libsndfile1-dev ffmpeg curl ca-certificates unzip && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
-
-
-# 2. Install Kaldi
+# 2. Install Kaldi (CPU)
 WORKDIR /opt
 RUN git clone --depth 1 https://github.com/kaldi-asr/kaldi.git
 WORKDIR /opt/kaldi/tools
-RUN mkdir -p python
-RUN sed -i 's/OPENFST_VERSION = .*/OPENFST_VERSION = 1.8.2/' Makefile
-RUN make -j 4
+RUN ./extras/install_openblas.sh && \
+    make -j $(nproc)
 WORKDIR /opt/kaldi/src
-RUN ./configure --shared && make depend -j 4 && make -j 4
+RUN ./configure --shared --mathlib=OPENBLAS && \
+    make depend -j $(nproc) && \
+    make -j $(nproc)
 
-# 3. Install ESPnet
+# 3. Install ESPnet (CPU, no CUDA)
 WORKDIR /opt
 RUN git clone --depth 1 https://github.com/espnet/espnet.git
 WORKDIR /opt/espnet/tools
 RUN python3 -m venv venv
 ENV PATH="/opt/espnet/tools/venv/bin:$PATH"
-RUN /bin/bash -c ". venv/bin/activate && pip install --upgrade pip && pip install wheel && pip install espnet"
+RUN . venv/bin/activate && \
+    pip install --upgrade pip wheel && \
+    make KALDI=/opt/kaldi CPU_ONLY=1 && \
+    pip cache purge
 
 # 4. Copy your repo
 WORKDIR /workspace
 COPY . /workspace
 
-# 5. Install your repo's Python dependencies in ESPnet venv
-RUN /bin/bash -c ". /opt/espnet/tools/venv/bin/activate && pip install -r /workspace/requirements.txt"
+# 5. Install your repo's dependencies in ESPnet venv
+RUN . /opt/espnet/tools/venv/bin/activate && \
+    pip install --no-cache-dir -r /workspace/requirements.txt
 
-# 6. Update path_try.sh to point to /opt/kaldi
+# 6. Point your scripts to Kaldi
 RUN sed -i 's|export KALDI_ROOT=.*|export KALDI_ROOT=/opt/kaldi|' /workspace/path_try.sh
 
-# 7. Copy entrypoint script
+# 7. Entrypoint
 COPY docker_entrypoint.sh /docker_entrypoint.sh
 RUN chmod +x /docker_entrypoint.sh
-
-# 8. Set entrypoint
-WORKDIR /workspace
-ENTRYPOINT ["/docker_entrypoint.sh"] 
+ENTRYPOINT ["/docker_entrypoint.sh"]
