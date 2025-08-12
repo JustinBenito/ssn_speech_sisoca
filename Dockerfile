@@ -13,16 +13,17 @@ RUN apt-get update && \
         python-is-python3 && \
     rm -rf /var/lib/apt/lists/*
 
-# 2. Install Kaldi (CPU)
+# 2. Install Kaldi (CPU) - use system OpenBLAS instead of install_openblas.sh
 WORKDIR /opt
 RUN git clone --depth 1 https://github.com/kaldi-asr/kaldi.git
 WORKDIR /opt/kaldi/tools
-RUN ./extras/install_openblas.sh && \
-    make -j $(nproc)
+RUN touch openblas.done  # trick Kaldi into thinking OpenBLAS is installed
+RUN make -j $(nproc)
 WORKDIR /opt/kaldi/src
 RUN ./configure --shared --mathlib=OPENBLAS && \
     make depend -j $(nproc) && \
     make -j $(nproc)
+
 
 # 3. Install ESPnet (CPU, no CUDA)
 WORKDIR /opt
