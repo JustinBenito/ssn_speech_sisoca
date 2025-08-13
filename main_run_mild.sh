@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source activate_python.sh
 source cmd.sh
 source path_try.sh
 
@@ -32,7 +33,8 @@ mkdir -p wav_test
 
 last_part=$(echo "$input_wav_path" | rev | cut -d'/' -f1 | rev)
 base_name=$(basename "$last_part" .wav)
-spk=$(echo "$input_wav_path" | cut -d '/' -f 7)
+#spk=$(echo "$input_wav_path" | cut -d '/' -f 7)
+spk=$(echo "$base_name" | cut -d '_' -f 1)
 
 echo $last_part
 echo $base_name
