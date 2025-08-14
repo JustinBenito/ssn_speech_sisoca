@@ -4,7 +4,7 @@ import subprocess
 import os
 from fastapi.middleware.cors import CORSMiddleware
 import base64
-from synthapi import synthesize_tamil  # Import the synthesizer
+# from synthapi import synthesize_tamil  # Import the synthesizer
 import shutil
 
 # Dynamically determine the base directory of the app
@@ -96,7 +96,7 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
         texts = " ".join(text)
 
         # Call the Tamil synthesizer API
-        synth = synthesize_tamil(texts)
+        # synth = synthesize_tamil(texts)
 
         # Build the new translated text
         pron_dict_path = os.path.join(kaldi_egs_dir, 'pronuncing_dictionary')
