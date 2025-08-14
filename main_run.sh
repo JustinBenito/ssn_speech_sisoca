@@ -81,5 +81,5 @@ echo ""
 echo "Tamil text: $tam_tex"
 echo ""
 
-python3 synthesize_CONTROL.py "$tam_tex"
+python3 g_tts.py "$tam_tex"
 #aplay test.wav 
