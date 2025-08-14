@@ -1,47 +1,63 @@
-#step 1 is installing espnet
-FROM espnet/espnet:cpu-latest
+# #step 1 is installing espnet
+# FROM espnet/espnet:cpu-latest
 
-# Environment
-ENV LC_ALL=C.UTF-8
-ENV LANG=C.UTF-8
+# # Environment
+# ENV LC_ALL=C.UTF-8
+# ENV LANG=C.UTF-8
 
-# Copy repo
-WORKDIR /workspace
-COPY . /workspace
+# # Copy repo
+# WORKDIR /workspace
+# COPY . /workspace
 
 
-# Update and install dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    automake \
-    autoconf \
-    libtool \
-    subversion \
-    wget \
-    python3 \
-    python3-pip \
-    libatlas3-base \
-    alsa-utils \
-    sox \
-    && rm -rf /var/lib/apt/lists/*
+# # Update and install dependencies
+# RUN apt-get update && apt-get install -y \
+#     build-essential \
+#     automake \
+#     autoconf \
+#     libtool \
+#     subversion \
+#     wget \
+#     python3 \
+#     python3-pip \
+#     libatlas3-base \
+#     alsa-utils \
+#     sox \
+#     && rm -rf /var/lib/apt/lists/*
 
-# Build tools: sph2pipe and openfst
-WORKDIR /opt/kaldi/tools
-RUN make sph2pipe openfst -j$(nproc)
+# # Build tools: sph2pipe and openfst
+# WORKDIR /opt/kaldi/tools
+# RUN make sph2pipe openfst -j$(nproc)
 
-# Build src
-WORKDIR /opt/kaldi/src
-RUN ./configure --mathlib=ATLAS
-RUN make -j$(nproc) clean depend
-RUN make -j$(nproc)
+# # Build src
+# WORKDIR /opt/kaldi/src
+# RUN ./configure --mathlib=ATLAS
+# RUN make -j$(nproc) clean depend
+# RUN make -j$(nproc)
 
-WORKDIR /opt/kaldi/egs
-RUN git clone https://github.com/JustinBenito/ssn_speech_sisoca.git
+# WORKDIR /opt/kaldi/egs
+# RUN git clone https://github.com/JustinBenito/ssn_speech_sisoca.git
 
+# WORKDIR /opt/kaldi/egs/ssn_speech_sisoca
+# RUN python3 -m venv .venv 
+# RUN source .venv/bin/activate
+# RUN pip install -r requirements.txt
+# RUN fastapi run
+
+# new docker file it is :)
+
+FROM speechlabssn/sisoca:latest
+
+# Set working directory
 WORKDIR /opt/kaldi/egs/ssn_speech_sisoca
-RUN python3 -m venv .venv 
-RUN source .venv/bin/activate
-RUN pip install -r requirements.txt
-RUN fastapi run
 
+# Activate the virtual environment by adjusting PATH
+ENV PATH="/opt/kaldi/egs/ssn_speech_sisoca/.venv/bin:$PATH"
+
+# Expose FastAPI port inside container
+EXPOSE 8000
+
+# Run FastAPI app
+# Assuming your app is started by "fastapi run" or maybe "uvicorn main:app --host 0.0.0.0 --port 8000"
+CMD ["fastapi", "run", "--host", "0.0.0.0", "--port", "8000"]
 
