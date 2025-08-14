@@ -1,4 +1,4 @@
-d# step 1 is installing espnet
+#step 1 is installing espnet
 FROM espnet/espnet:cpu-latest
 
 # Environment
