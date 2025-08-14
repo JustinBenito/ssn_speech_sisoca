@@ -4,7 +4,7 @@ import subprocess
 import os
 from fastapi.middleware.cors import CORSMiddleware
 import base64
-from synthapi import synthesize_tamil  # Import the synthesizer
+# from synthapi import synthesize_tamil  # Import the synthesizer
 import shutil
 
 # Dynamically determine the base directory of the app
