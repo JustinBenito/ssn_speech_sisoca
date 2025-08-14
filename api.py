@@ -96,7 +96,7 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
         texts = " ".join(text)
 
         # Call the Tamil synthesizer API
-        synth = synthesize_tamil(texts)
+        # synth = synthesize_tamil(texts)
 
         # Build the new translated text
         pron_dict_path = os.path.join(kaldi_egs_dir, 'pronuncing_dictionary')
