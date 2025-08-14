@@ -1,13 +1,13 @@
 # nnet-latgen-faster --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri_8_2000_mild/graph/words.txt exp/DNN_tri_8_2000_aligned_layer3_nodes256_mild/final.mdl exp/tri_8_2000_mild/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:test_one/split1/1/utt2spk scp:test_one/split1/1/cmvn.scp scp:test_one/split1/1/feats.scp ark:- |" "ark:|gzip -c > exp/DNN_tri_8_2000_aligned_layer3_nodes256_mild/decode/lat.1.gz" 
-# Started at Thu Aug  7 12:01:43 IST 2025
+# Started at Wed Aug 13 09:23:15 IST 2025
 #
 nnet-latgen-faster --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri_8_2000_mild/graph/words.txt exp/DNN_tri_8_2000_aligned_layer3_nodes256_mild/final.mdl exp/tri_8_2000_mild/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:test_one/split1/1/utt2spk scp:test_one/split1/1/cmvn.scp scp:test_one/split1/1/feats.scp ark:- |' 'ark:|gzip -c > exp/DNN_tri_8_2000_aligned_layer3_nodes256_mild/decode/lat.1.gz' 
 apply-cmvn --utt2spk=ark:test_one/split1/1/utt2spk scp:test_one/split1/1/cmvn.scp scp:test_one/split1/1/feats.scp ark:- 
 LOG (apply-cmvn[5.5.1179~1-4b2bce]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 1 utterances, errors on 0
-test malaiyaalxa panxnxaangga 
-LOG (nnet-latgen-faster[5.5.1179~1-4b2bce]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance test is 0.201203 over 130 frames.
-LOG (nnet-latgen-faster[5.5.1179~1-4b2bce]:main():nnet-latgen-faster.cc:181) Time taken 0.04686s: real-time factor assuming 100 frames/sec is 0.0360461
+FPU_281_3 tawira seyyalaam 
+LOG (nnet-latgen-faster[5.5.1179~1-4b2bce]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FPU_281_3 is 0.040049 over 153 frames.
+LOG (nnet-latgen-faster[5.5.1179~1-4b2bce]:main():nnet-latgen-faster.cc:181) Time taken 0.147937s: real-time factor assuming 100 frames/sec is 0.0966907
 LOG (nnet-latgen-faster[5.5.1179~1-4b2bce]:main():nnet-latgen-faster.cc:184) Done 1 utterances, failed for 0
-LOG (nnet-latgen-faster[5.5.1179~1-4b2bce]:main():nnet-latgen-faster.cc:186) Overall log-likelihood per frame is 0.201203 over 130 frames.
+LOG (nnet-latgen-faster[5.5.1179~1-4b2bce]:main():nnet-latgen-faster.cc:186) Overall log-likelihood per frame is 0.040049 over 153 frames.
 # Accounting: time=0 threads=1
-# Ended (code 0) at Thu Aug  7 12:01:43 IST 2025, elapsed time 0 seconds
+# Ended (code 0) at Wed Aug 13 09:23:15 IST 2025, elapsed time 0 seconds
