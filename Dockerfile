@@ -1,4 +1,4 @@
-# step 1 is installing espnet
+d# step 1 is installing espnet
 FROM espnet/espnet:cpu-latest
 
 # Environment
@@ -10,13 +10,13 @@ WORKDIR /workspace
 COPY . /workspace
 
 # Install requirements in ESPnet venv
-RUN . /espnet/tools/venv/bin/activate && \
-    pip install --no-cache-dir -r requirements.txt
+# RUN . /espnet/tools/venv/bin/activate && \
+#     pip install --no-cache-dir -r requirements.txt
 
-# Make scripts executable
-RUN chmod +x activate_python.sh path_try.sh main_run.sh main_run_mild.sh main_run_punitha.sh
+# # Make scripts executable
+# RUN chmod +x activate_python.sh path_try.sh main_run.sh main_run_mild.sh main_run_punitha.sh
 
-# Entrypoint
-COPY docker_entrypoint.sh /docker_entrypoint.sh
-RUN chmod +x /docker_entrypoint.sh
-ENTRYPOINT ["/docker_entrypoint.sh"]
+# # Entrypoint
+# COPY docker_entrypoint.sh /docker_entrypoint.sh
+# RUN chmod +x /docker_entrypoint.sh
+# ENTRYPOINT ["/docker_entrypoint.sh"]
