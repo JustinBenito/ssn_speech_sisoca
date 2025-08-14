@@ -52,17 +52,20 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
         # Save the uploaded file to the specified directory
         with open(file_location, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
+            
+        print("File saved at:", file_location)
 
         # Dynamically resolve script and config paths
         espnet_tools_dir = os.path.join(BASE_DIR, "opt", "espnet", "tools")
         kaldi_egs_dir = os.path.join(BASE_DIR)
         # If your kaldi/egs directory is not the app root, adjust accordingly
-
+        print("Kaldi EGS Directory:", kaldi_egs_dir)    
         # Activate virtual environment and run Kaldi commands
-        activate_venv = runs("source activate_python.sh", cwd=espnet_tools_dir)
+        #activate_venv = runs("source activate_python.sh", cwd=espnet_tools_dir)
         pyversion = runs('python3 --version')
-        cmd_source = runs("source cmd.sh", cwd=kaldi_egs_dir)
-        path_try = runs("source path_try.sh", cwd=kaldi_egs_dir)
+        print("Python Version:", pyversion)
+        #cmd_source = runs("source cmd.sh", cwd=kaldi_egs_dir)
+        #path_try = runs("source path_try.sh", cwd=kaldi_egs_dir)
 
         # Ensure the main Kaldi script is executable
         if severity == 'moderate':
@@ -70,6 +73,7 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
             ensure_executable(main_script_path)
         elif severity == 'punitha':
             main_script_path = os.path.join(kaldi_egs_dir, 'main_run_punitha.sh')
+            print("Using Punitha script:", main_script_path)
             ensure_executable(main_script_path)
         else: # In case of mild
             main_script_path = os.path.join(kaldi_egs_dir, 'main_run_mild.sh')
@@ -81,6 +85,8 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
             cwd=kaldi_egs_dir,
             capture_output=True, text=True
         )
+        
+        print("Run Main Output:", run_main.stdout)
 
         # Check if output.txt exists before proceeding
         output_txt_path = os.path.join(kaldi_egs_dir, "output.txt")
@@ -90,9 +96,11 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
         # Read and process output.txt
         with open(output_txt_path, "r") as file:
             content = file.read()
+        print("Output Content:", content)
         cnt = content.split(" ")
         speaker = cnt[0][:3]  # Extract the speaker part
         text = cnt[1:]
+        print("Final:", text)
         texts = " ".join(text)
 
         # Call the Tamil synthesizer API
@@ -116,6 +124,7 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
 
         # Check if the output WAV file exists
         output_file_path = os.path.join(kaldi_egs_dir, "test.wav")
+        print("Output WAV File Path:", output_file_path)
         if not os.path.exists(output_file_path):
             raise HTTPException(status_code=404, detail="Output WAV file not found.")
 
