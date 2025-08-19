@@ -46,7 +46,7 @@
 
 # new docker file it is :)
 
-FROM speechlabssn/sisoca:latest
+FROM speechlabssn/sisoca:v1.0
 
 # Set working directory
 WORKDIR /opt/kaldi/egs/ssn_speech_sisoca
