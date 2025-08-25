@@ -46,18 +46,41 @@
 
 # new docker file it is :)
 
+# FROM speechlabssn/sisoca:v1.0
+
+# # Set working directory
+# WORKDIR /opt/kaldi/egs/ssn_speech_sisoca
+
+# # Activate the virtual environment by adjusting PATH
+# ENV PATH="/opt/kaldi/egs/ssn_speech_sisoca/.venv/bin:$PATH"
+
+# # Expose FastAPI port inside container
+# EXPOSE 8000
+
+# # Run FastAPI app
+# # Assuming your app is started by "fastapi run" or maybe "uvicorn main:app --host 0.0.0.0 --port 8000"
+# CMD ["fastapi", "run", "--host", "0.0.0.0", "--port", "8000"]
+
+# ++++++++++++++++++
 FROM speechlabssn/sisoca:v1.0
 
 # Set working directory
 WORKDIR /opt/kaldi/egs/ssn_speech_sisoca
 
-# Activate the virtual environment by adjusting PATH
+# Ensure latest code from repo
+RUN git stash
+RUN git pull
+
+# Ensure we use the venv pip/python
 ENV PATH="/opt/kaldi/egs/ssn_speech_sisoca/.venv/bin:$PATH"
 
-# Expose FastAPI port inside container
+# Install dependencies into the existing venv
+RUN pip install --upgrade pip \
+    && pip install -r requirements.txt \
+    && pip install pydub
+
+# Expose FastAPI port
 EXPOSE 8000
 
-# Run FastAPI app
-# Assuming your app is started by "fastapi run" or maybe "uvicorn main:app --host 0.0.0.0 --port 8000"
-CMD ["fastapi", "run", "--host", "0.0.0.0", "--port", "8000"]
-
+# Run FastAPI with auto-reload (development mode)
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
