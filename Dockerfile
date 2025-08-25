@@ -64,17 +64,16 @@
 # ++++++++++++++++++
 FROM speechlabssn/sisoca:v1.0
 
-# Set working directory
-WORKDIR /opt/kaldi/egs/ssn_speech_sisoca
+# Put your app in a clean folder, not inside /opt/kaldi
+WORKDIR /workspace/app
 
-# Ensure latest code from repo
-RUN git stash
-RUN git pull
+# Copy your app code into the container
+COPY . .
 
-# Ensure we use the venv pip/python
+# Use existing venv from base image
 ENV PATH="/opt/kaldi/egs/ssn_speech_sisoca/.venv/bin:$PATH"
 
-# Install dependencies into the existing venv
+# Install Python deps
 RUN pip install --upgrade pip \
     && pip install -r requirements.txt \
     && pip install pydub
@@ -82,5 +81,5 @@ RUN pip install --upgrade pip \
 # Expose FastAPI port
 EXPOSE 8000
 
-# Run FastAPI with auto-reload (development mode)
+# Start FastAPI app
 CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
