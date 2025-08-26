@@ -8,12 +8,24 @@ input_wav_path=$1
 
 # Convert the audio to the same name with different settings (16 kHz, mono)
 temp_output="${input_wav_path%.wav}_temp.wav"
+# ffmpeg -y -i "$input_wav_path" -ar 16000 -ac 1 "$temp_output"
+# # If conversion is successful, move the temporary file to overwrite the original
+# if [ $? -eq 0 ]; then
+#     mv "$temp_output" "$input_wav_path"
+# else
+#     echo "Conversion failed"
+# fi
+
 ffmpeg -y -i "$input_wav_path" -ar 16000 -ac 1 "$temp_output"
-# If conversion is successful, move the temporary file to overwrite the original
-if [ $? -eq 0 ]; then
+status=$?
+if [ $status -eq 0 ]; then
     mv "$temp_output" "$input_wav_path"
 else
-    echo "Conversion failed"
+    echo "Conversion failed with status $status"
+    echo "Input path: $input_wav_path"
+    ls -l "$input_wav_path"
+    which ffmpeg
+    exit 1
 fi
 
 aplay "$input_wav_path"
