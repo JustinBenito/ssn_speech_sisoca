@@ -37,7 +37,7 @@ def runs(command: str, cwd: str = None):
         return {"error": f"Error: {e.stderr}"}
 
 # Define the directory where files will be saved
-UPLOAD_DIRECTORY = os.path.join(BASE_DIR, "uploads")
+UPLOAD_DIRECTORY = "/opt/kaldi/egs/ssn_speech_sisoca/uploads" 
 
 # Ensure that the directory exists
 if not os.path.exists(UPLOAD_DIRECTORY):
@@ -57,9 +57,10 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
         print("File saved at:", file_location)
 
         # Dynamically resolve script and config paths
-        espnet_tools_dir = os.path.join(BASE_DIR, "opt", "espnet", "tools")
+        # espnet_tools_dir = os.path.join(BASE_DIR, "opt", "espnet", "tools")
+        
         kaldi_egs_dir = os.path.join(BASE_DIR)
-        # If your kaldi/egs directory is not the app root, adjust accordingly
+
         print("Kaldi EGS Directory:", kaldi_egs_dir)    
         # Activate virtual environment and run Kaldi commands
         #activate_venv = runs("source activate_python.sh", cwd=espnet_tools_dir)
