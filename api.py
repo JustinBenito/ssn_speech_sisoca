@@ -83,7 +83,7 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
 
         # Run the Kaldi script, passing the uploaded file as an argument
         run_main = subprocess.run(
-            ["/bin/bash", main_script_path, file.filename],
+            ["/bin/bash", main_script_path, file_location],
             cwd=kaldi_egs_dir,
             capture_output=True, text=True
         )
