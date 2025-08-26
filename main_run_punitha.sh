@@ -1,8 +1,8 @@
 #!/bin/bash
 
-source activate_python.sh
-source cmd.sh
-source path_try.sh
+# source activate_python.sh
+# source cmd.sh
+# source path_try.sh
 
 input_wav_path=$1
 
