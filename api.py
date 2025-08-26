@@ -80,11 +80,18 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
             ensure_executable(main_script_path)
 
         # Run the Kaldi script, passing the uploaded file as an argument
+        # run_main = subprocess.run(
+        #     ["/bin/bash", main_script_path, file.filename],
+        #     cwd=kaldi_egs_dir,
+        #     capture_output=True, text=True
+        # )
         run_main = subprocess.run(
-            ["/bin/bash", main_script_path, file.filename],
-            cwd=kaldi_egs_dir,
-            capture_output=True, text=True
+            ["bash", "main_run_punitha.sh", input_wav],
+            cwd="/opt/kaldi/egs/ssn_speech_sisoca",
+            env={**os.environ, "PATH": "/usr/bin:" + os.environ["PATH"]}
         )
+
+
         
         print("Run Main Output:", run_main.stdout)
 
