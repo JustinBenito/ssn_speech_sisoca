@@ -64,11 +64,9 @@
 # ++++++++++++++++++
 FROM speechlabssn/sisoca:v1.0
 
-# Put your app in a clean folder, not inside /opt/kaldi
-WORKDIR /workspace/app
-
-# Copy your app code into the container
-COPY . .
+WORKDIR /opt/kaldi/egs/ssn_speech_sisoca
+RUN git stash
+RUN git pull
 
 # Use existing venv from base image
 ENV PATH="/opt/kaldi/egs/ssn_speech_sisoca/.venv/bin:$PATH"
