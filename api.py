@@ -83,7 +83,7 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
         run_main = subprocess.run(
             ["/bin/bash", main_script_path, file.filename],
             cwd=kaldi_egs_dir,
-             env={**os.environ, "PATH": "/usr/bin:" + os.environ["PATH"],
+            env={**os.environ, "PATH": "/usr/bin:" + os.environ["PATH"]},
             capture_output=True, text=True
         )
         
