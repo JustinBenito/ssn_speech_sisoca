@@ -57,7 +57,7 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
 
         # Dynamically resolve script and config paths
         espnet_tools_dir = os.path.join(BASE_DIR, "opt", "espnet", "tools")
-        kaldi_egs_dir = os.path.join(BASE_DIR)
+        kaldi_egs_dir = "/opt/kaldi/egs/ssn_speech_sisoca"
         # If your kaldi/egs directory is not the app root, adjust accordingly
         print("Kaldi EGS Directory:", kaldi_egs_dir)    
         # Activate virtual environment and run Kaldi commands
@@ -80,16 +80,18 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
             ensure_executable(main_script_path)
 
         # Run the Kaldi script, passing the uploaded file as an argument
-        # run_main = subprocess.run(
-        #     ["/bin/bash", main_script_path, file.filename],
-        #     cwd=kaldi_egs_dir,
-        #     capture_output=True, text=True
-        # )
         run_main = subprocess.run(
-            ["bash", "main_run_punitha.sh", input_wav],
-            cwd="/opt/kaldi/egs/ssn_speech_sisoca",
-            env={**os.environ, "PATH": "/usr/bin:" + os.environ["PATH"]}
+            ["/bin/bash", main_script_path, file.filename],
+            cwd=kaldi_egs_dir,
+             env={**os.environ, "PATH": "/usr/bin:" + os.environ["PATH"],
+            capture_output=True, text=True
         )
+        
+        # run_main = subprocess.run(
+        #     ["bash", "main_run_punitha.sh", input_wav],
+        #     cwd="/opt/kaldi/egs/ssn_speech_sisoca",
+        #     env={**os.environ, "PATH": "/usr/bin:" + os.environ["PATH"]}
+        # )
 
 
         
