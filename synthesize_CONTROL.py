@@ -13,7 +13,7 @@
    
 
 import sys
-sys.path.append('/home/ssn/espnet/')
+
 #sys.path.append('/home/sltlab/espnet/tools/venv/lib64/python3.10/site-packages')
 
 import time
