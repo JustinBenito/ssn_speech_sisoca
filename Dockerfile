@@ -62,11 +62,13 @@
 # CMD ["fastapi", "run", "--host", "0.0.0.0", "--port", "8000"]
 
 # ++++++++++++++++++
-FROM speechlabssn/sisoca:v1.0
+FROM speechlabssn/espnet-tts:latest
 
 WORKDIR /opt/kaldi/egs/ssn_speech_sisoca
 RUN git stash
 RUN git pull
+RUN python3 download.py 
+RUN mv fastspeech2_aarthi/* exp/tts_train_fastspeech2_raw_phn_espeak_ng_tamil/
 
 # Use existing venv from base image
 ENV PATH="/opt/kaldi/egs/ssn_speech_sisoca/.venv/bin:$PATH"
