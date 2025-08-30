@@ -42,5 +42,14 @@ speech_keys = text2speech(new_text)
 print(speech)
 end = time.time()
 soundfile.write("test.wav", speech.numpy(), text2speech.fs, "PCM_16")
+
+import os
+
+if os.path.exists("test.wav"):
+    print("✅ File written successfully")
+else:
+    print("❌ File not found")
+
+
 #os.system("play test.wav")
 #print(end-start)
