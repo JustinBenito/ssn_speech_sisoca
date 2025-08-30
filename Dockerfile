@@ -64,6 +64,8 @@
 # ++++++++++++++++++
 FROM speechlabssn/espnet-tts:latest
 
+RUN chmod -R 777 /opt/kaldi/egs/ssn_speech_sisoca
+
 WORKDIR /opt/kaldi/egs/ssn_speech_sisoca
 RUN git stash
 RUN git pull
