@@ -22,8 +22,9 @@ echo "$input_wav_path"
 
 rm -rf ./mfcc
 rm -rf ./wav_test
-rm -rf ./output_MONO.txt
+rm -rf ./output.txt
 rm -rf ./test_one
+rm test.wav
 
 mkdir -p test_one
 mkdir -p wav_test
