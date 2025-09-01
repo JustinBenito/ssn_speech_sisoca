@@ -80,6 +80,10 @@ RUN apt-get update && apt-get install -y sox ffmpeg
 ENV KALDI_ROOT=/opt/kaldi
 ENV PATH=$KALDI_ROOT/src/latbin:$KALDI_ROOT/src/bin:$KALDI_ROOT/src/fstbin:$KALDI_ROOT/src/gmmbin:$KALDI_ROOT/src/featbin:$KALDI_ROOT/src/lmbin:$KALDI_ROOT/src/nnet2bin:$KALDI_ROOT/src/nnet3bin:$KALDI_ROOT/src/online2bin:$KALDI_ROOT/src/ivectorbin:$KALDI_ROOT/src/rnnlmbin:$KALDI_ROOT/tools/openfst/bin:$PATH
 
+ENV TORCH_BACKEND_DISABLE_MKLDNN=1 \
+    OMP_NUM_THREADS=1 \
+    MKL_THREADING_LAYER=GNU
+
 
 # Install Python deps
 RUN pip install --upgrade pip \
