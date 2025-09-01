@@ -83,6 +83,7 @@ echo ""
 echo "Tamil text: $tam_tex"
 echo ""
 
+TORCH_BACKEND_DISABLE_MKLDNN=1
 python3 synthesize_CONTROL.py "$tam_tex" 2>&1 | tee infer.log
 
 python3 -m espnet2.bin.tts_inference \
