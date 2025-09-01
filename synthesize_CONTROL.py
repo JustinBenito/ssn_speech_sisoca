@@ -16,13 +16,18 @@ import sys
 
 #sys.path.append('/home/sltlab/espnet/tools/venv/lib64/python3.10/site-packages')
 
+import os
+
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["TORCH_BACKEND_DISABLE_MKLDNN"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = ""  # force CPU
+
 import time
 import soundfile
 from espnet2.bin.tts_inference import Text2Speech
 
-import os
-
-os.environ["TORCH_BACKEND_DISABLE_MKLDNN"] = "1"
 
 if len(sys.argv) != 2:
     print("Argument - text to be synthesized")
@@ -45,7 +50,6 @@ print(speech)
 end = time.time()
 soundfile.write("test.wav", speech.numpy(), text2speech.fs, "PCM_16")
 
-import os
 
 if os.path.exists("test.wav"):
     print("✅ File written successfully")

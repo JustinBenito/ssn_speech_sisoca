@@ -88,7 +88,7 @@ ENV TORCH_BACKEND_DISABLE_MKLDNN=1 \
 # Install Python deps
 RUN pip install --upgrade pip \
     && pip install -r requirements.txt  \
-    &&pip uninstall -y torch torchvision torchaudio && \
+    && pip uninstall -y torch torchvision torchaudio && \
     pip install --index-url https://download.pytorch.org/whl/cpu \
     torch==2.2.2+cpu torchvision==0.17.2+cpu torchaudio==2.2.2+cpu
 
