@@ -96,3 +96,4 @@ python3 synthesize_CONTROL.py "$tam_tex" 2>&1 | tee infer.log
 # mv ./tts_out/*.wav  test.wav
 
 #aplay test.wav 
+MKLDNN_VERBOSE=1 python synthesize_CONTROL.py
