@@ -83,8 +83,7 @@ ENV PATH=$KALDI_ROOT/src/latbin:$KALDI_ROOT/src/bin:$KALDI_ROOT/src/fstbin:$KALD
 
 # Install Python deps
 RUN pip install --upgrade pip \
-    && pip install -r requirements.txt \
-    && pip install pydub
+    && pip install -r requirements.txt 
 
 # Expose FastAPI port
 EXPOSE 8000

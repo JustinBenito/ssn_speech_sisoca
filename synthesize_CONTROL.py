@@ -22,6 +22,8 @@ from espnet2.bin.tts_inference import Text2Speech
 
 import os
 
+os.environ["TORCH_BACKEND_DISABLE_MKLDNN"] = "1"
+
 if len(sys.argv) != 2:
     print("Argument - text to be synthesized")
 

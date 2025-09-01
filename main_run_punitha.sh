@@ -74,9 +74,9 @@ echo "$var2"
 #python synthesize.py "$var2" $spk
 
 #python3 synthesize_CONTROL.py "$var2"
-python3 tamil_trans.py to_tamil "$var2" > tamil_text
+python3 tamil_trans.py to_tamil "$var2" > tamil_text.txt
 
-tam_tex=$(cat tamil_text)
+tam_tex=$(cat tamil_text.txt)
 echo ""
 echo "Tamil text: $tam_tex"
 echo ""
@@ -86,7 +86,7 @@ python3 synthesize_CONTROL.py "$tam_tex" 2>&1 | tee infer.log
 #aplay test.wav 
 python3 -m espnet2.bin.tts_inference \
     --ngpu 0 \
-    --data_path_and_name_and_type "tamil_text:text:text" \
+    --data_path_and_name_and_type "tamil_text.txt:text:text" \
     --train_config exp/tts_train_fastspeech2_raw_phn_espeak_ng_tamil/config.yaml \
     --model_file exp/tts_train_fastspeech2_raw_phn_espeak_ng_tamil/1000epoch.pth \
     --vocoder_tag parallel_wavegan/vctk_style_melgan.v1 \
