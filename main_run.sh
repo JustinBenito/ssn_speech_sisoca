@@ -94,7 +94,7 @@ echo ""
 echo "Tamil text: $tam_tex"
 echo ""
 
-python3 synthesize_CONTROL.py "$tam_tex"
+python3 synthesize_CONTROL.py "$tam_tex" 2>&1 | tee infer.log
 #aplay test.wav 
 python3 -m espnet2.bin.tts_inference \
     --ngpu 0 \
@@ -102,5 +102,5 @@ python3 -m espnet2.bin.tts_inference \
     --train_config exp/tts_train_fastspeech2_raw_phn_espeak_ng_tamil/config.yaml \
     --model_file exp/tts_train_fastspeech2_raw_phn_espeak_ng_tamil/1000epoch.pth \
     --vocoder_tag parallel_wavegan/vctk_style_melgan.v1 \
-    --output_dir ./tts_out
+    --output_dir ./tts_out 2>&1 | tee infer.log
 mv ./tts_out/*.wav  test.wav
