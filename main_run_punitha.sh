@@ -84,3 +84,11 @@ echo ""
 python3 synthesize_CONTROL.py "$tam_tex"
 
 #aplay test.wav 
+python3 -m espnet2.bin.tts_inference \
+    --ngpu 0 \
+    --data_path_and_name_and_type "tamil_text:text:text" \
+    --train_config exp/tts_train_fastspeech2_raw_phn_espeak_ng_tamil/config.yaml \
+    --model_file exp/tts_train_fastspeech2_raw_phn_espeak_ng_tamil/1000epoch.pth \
+    --vocoder_tag parallel_wavegan/vctk_style_melgan.v1 \
+    --output_dir ./tts_out
+mv ./tts_out/*.wav  test.wav
