@@ -58,15 +58,15 @@ mv fastspeech2_aarthi/* exp/tts_train_fastspeech2_raw_phn_espeak_ng_tamil/
 ```
 ### 5️⃣ Run Model Decoding
 
--**Moderate model decoding**
+- **Moderate model decoding**
 ```bash
 ./main_run.sh <audio.wav>
 ```
--**Mild model decoding**
+- **Mild model decoding**
 ```bash
 ./main_run_mild.sh <audio.wav>
 ```
--**Punitha model decoding**
+- **Punitha model decoding**
 ```bash
 ./main_run_punitha.sh <audio.wav>
 ```
