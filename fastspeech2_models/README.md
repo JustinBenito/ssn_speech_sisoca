@@ -8,8 +8,8 @@ pip install -r requirements.txt
 ```
 python3 synthesize.py "arg1" arg2
 ```
-arg1 - Tamil text 
-arg2 - Speaker ID
+- **arg1** - Tamil text 
+- **arg2** - Speaker ID
 
 Kindly refer `speaker_list.txt` for the available speakers.
 Example:
