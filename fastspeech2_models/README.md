@@ -1,7 +1,7 @@
-##Fastspeech2 TTS Models
+## Fastspeech2 TTS Models
 This folder consists of TTS models for dysarthric speakers in `exp/` directory.
 
-# Setup instructions
+### Setup instructions
 ```
 pip install -r requirements.txt
 ```
