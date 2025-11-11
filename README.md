@@ -36,7 +36,7 @@ Ensure you have Kaldi and ESPnet installed.
 Activate the ESPnet virtual environment:
 
 ```bash
-source activate_python.sh    # Activates ESPnet virtual environment
+source activate_python.sh    # Activates ESPnet virtual environment (optional)
 source path_try.sh           # Sets Kaldi + ESPnet paths
 ```
 👉 Make sure both ESPnet and Kaldi paths are correctly set in `activate_python.sh` and `path_try.sh` respectively.
@@ -45,7 +45,7 @@ source path_try.sh           # Sets Kaldi + ESPnet paths
 ```bash
 pip install -r requirements.txt
 ```
-### 4️⃣ Download & Setup TTS Models
+### 4️⃣ Download & Setup TTS Model
 Run the model download script:
 
 ```bash
@@ -69,7 +69,9 @@ mv fastspeech2_aarthi/* exp/tts_train_fastspeech2_raw_phn_espeak_ng_tamil/
 - **Punitha model decoding**
 ```bash
 ./main_run_punitha.sh <audio.wav>
+
 ```
+> Note: The above script consists of ASR and TTS pipline. Hence the output is saved as `test.wav`
 
 ### 6️⃣ Try our Web App
 👉 [sisoca.ssn.lat](sisoca.ssn.lat)
