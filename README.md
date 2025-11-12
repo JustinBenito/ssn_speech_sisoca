@@ -1,4 +1,4 @@
-# SISOCA Demo
+# SISOCA Speech-Input Speech-Output Communication Aid
 
 This project integrates a **DNN-HMM based ASR** (Automatic Speech Recognition) system and a **FastSpeech2-based TTS** (Text-to-Speech) system. It is designed for **dysarthria speech conversion**, specifically targeting **mild and moderate dysarthric speakers**, as well as **individual speaker adaptation** for dysarthria. The ASR transcribes the input speech, and the TTS generates clear, natural-sounding speech from the recognized text.
 
@@ -12,7 +12,7 @@ This project integrates a **DNN-HMM based ASR** (Automatic Speech Recognition) s
 
 ---
 
-## 📁 Models for Demo
+## 📁 ASR Models (only tamil)
 
 The **DNN-HMM** model files are stored in the `exp/` directory, with separate subfolders for each model:
 
