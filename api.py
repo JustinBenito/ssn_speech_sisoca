@@ -96,14 +96,14 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
             raise HTTPException(status_code=404, detail="Output file not found.")
         
         # Read and process output.txt
-        with open(output_txt_path, "r") as file:
-            content = file.read()
-        print("Output Content:", content)
-        cnt = content.split(" ")
-        speaker = cnt[0][:3]  # Extract the speaker part
-        text = cnt[1:]
-        print("Final:", text)
-        texts = " ".join(text)
+        # with open(output_txt_path, "r") as file:
+        #     content = file.read()
+        # print("Output Content:", content)
+        # cnt = content.split(" ")
+        # speaker = cnt[0][:3]  # Extract the speaker part
+        # text = cnt[1:]
+        # print("Final:", text)
+        # texts = " ".join(text)
 
         # Call the Tamil synthesizer API
         # synth = synthesize_tamil(texts)
@@ -119,10 +119,16 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
             d[eng] = tam
 
         # Generate translated text
-        new_text = ""
-        for word in text:
-            if word != '\n':
-                new_text += d.get(word, word) + ' '
+        # new_text = ""
+        # for word in text:
+        #     if word != '\n':
+        #         new_text += d.get(word, word) + ' '
+
+        tamil_text_file_path="tamil_text.txt"
+        new_text=""
+        with open(tamil_text_file_path, "rb") as tt:
+            new_text=tt.read()
+        print(new_text)
 
         # Check if the output WAV file exists
         output_file_path = os.path.join(kaldi_egs_dir, "test.wav")
