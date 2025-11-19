@@ -96,17 +96,17 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
             raise HTTPException(status_code=404, detail="Output file not found.")
         
         # Read and process output.txt
-        # with open(output_txt_path, "r") as file:
-        #     content = file.read()
-        # print("Output Content:", content)
-        # cnt = content.split(" ")
-        # speaker = cnt[0][:3]  # Extract the speaker part
+        with open(output_txt_path, "r") as file:
+            content = file.read()
+        print("Output Content:", content)
+        cnt = content.split(" ")
+        speaker = cnt[0][:3]  # Extract the speaker part
         # text = cnt[1:]
         # print("Final:", text)
         # texts = " ".join(text)
 
         # Call the Tamil synthesizer API
-        # synth = synthesize_tamil(texts)
+        #synth = synthesize_tamil(texts)
 
         # Build the new translated text
         pron_dict_path = os.path.join(kaldi_egs_dir, 'pronuncing_dictionary')
