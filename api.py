@@ -126,7 +126,7 @@ async def run_model(file: UploadFile = File(...), severity: str = Form(...)):
 
         tamil_text_file_path="tamil_text.txt"
         new_text=""
-        with open(tamil_text_file_path, "rb") as tt:
+        with open(tamil_text_file_path, "r") as tt:
             new_text=tt.read()
         print(new_text)
 
