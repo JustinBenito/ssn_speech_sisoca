@@ -13,8 +13,8 @@ cons_map = {
 }
 
 dv_map = {
-    ' ': ' ', 'aa': 'ா', 'ai': 'ை', 'au': 'ௗ', 'e': 'ெ', 'ee': 'ே', 'i': 'ி',
-    'ii': 'ீ', 'o': 'ொ', 'oo': 'ோ', 'u':'ு' , 'uu': 'ூ', 'eu': 'ு'
+    ' ': ' ','a':'' ,'aa': 'ா', 'ai': 'ை', 'au': 'ௗ', 'e': 'ெ', 'ee': 'ே', 'i': 'ி',
+    'ii': 'ீ', 'o': 'ொ', 'oo': 'ோ', 'u': 'ு', 'uu': 'ூ', 'eu': 'ு'
 }
 
 phone = ['a', 'aa', 'ai', 'au', 'b', 'c', 'd', 'dx', 'e', 'ee', 'eu', 'f', 'g', 'h', 'i',
@@ -24,9 +24,9 @@ phone = ['a', 'aa', 'ai', 'au', 'b', 'c', 'd', 'dx', 'e', 'ee', 'eu', 'f', 'g', 
 cons = ['c', 'h', 'j', 'k', 'g', 'd', 'dx', 'b', 'l', 'lx', 'm', 'n', 'nx', 'ng', 'nj', 'nd',
         'p', 'f', 'r', 'rx', 's', 'sx', 't', 'tx', 'w', 'y', 'zh', 'v']
 
-vowels = ['a', 'aa', 'ai', 'au', 'e', 'ee', 'i', 'ii', 'o', 'oo', 'u', 'uu', 'eu']
+vowels = ['a', 'aa', 'ai', 'au', 'e', 'ee','eu', 'i', 'ii', 'o', 'oo', 'u', 'uu']
 
-dv = ['aa', 'ai', 'au', 'e', 'ee', 'i', 'ii', 'o', 'oo', 'u', 'uu', 'eu']
+dv = ['a','aa', 'ai', 'au', 'e', 'ee','eu', 'i', 'ii', 'o', 'oo', 'u', 'uu']
 
 map1 = {**vowel_map, **cons_map}
 map2 = {**dv_map, **cons_map}
@@ -42,6 +42,8 @@ def transliterate_to_tamil(input_text: str) -> str:
 
     while i < len(phn) - 1:
         phn2 = phn[i] + phn[i+1]
+        # phn3 = phn[i] + phn[i+1] + phn[i+2]
+
         if phn2 in phone:
             inv_phn.append(phn2)
             i += 2
@@ -53,57 +55,53 @@ def transliterate_to_tamil(input_text: str) -> str:
             i += 1
     if i == len(phn) - 1:
         inv_phn.append(phn[i])
-
     tamil = ""
     prev_ph = " "
+    i = 0
 
-    for i in range(len(inv_phn) - 1):
+    while i < len(inv_phn) - 1:
         ph = inv_phn[i]
         nxt_ph = inv_phn[i + 1]
 
         c_v = ph in vowels
         c_c = ph in cons
-        c_dv = ph in dv
         n_v = nxt_ph in vowels
         n_c = nxt_ph in cons
-        n_dv = nxt_ph in dv
 
         if ph == ' ':
             tamil += ' '
             prev_ph = ' '
-        elif c_v and prev_ph not in cons and prev_ph not in vowels and n_v:
+            i += 1
+
+        elif c_v and prev_ph not in cons:
             tamil += vowel_map.get(ph, ph)
             prev_ph = ph
-        elif c_v and prev_ph not in cons and prev_ph not in vowels and not n_v and n_c:
-            tamil += vowel_map.get(ph, ph)
-            prev_ph = ph
-        elif c_v and prev_ph not in cons and prev_ph not in vowels and not n_v and not n_c:
-            tamil += vowel_map.get(ph, ph)
-            prev_ph = ph
-        elif c_v and prev_ph in vowels:
-            tamil += vowel_map.get(ph, ph)
-            prev_ph = ph
+            i += 1
+
         elif c_v and prev_ph in cons:
             tamil += dv_map.get(ph, ph)
             prev_ph = ph
-        elif c_c and not n_c and not n_v and nxt_ph != ' ':
-            tamil += map2.get(ph, ph) + "்"
-            prev_ph = ph
+            i += 1
+
+        elif c_c and nxt_ph == 'a':
+            tamil += map2.get(ph, ph)   # implicit vowel
+            prev_ph = 'a'
+            i += 2                      # skip 'a'
+
         elif c_c and n_c:
             tamil += map2.get(ph, ph) + "்"
             prev_ph = ph
-        elif c_c and nxt_ph == 'a':
-            tamil += map2.get(ph, ph)
-            # skip next phoneme 'a'
-            if i + 1 < len(inv_phn) - 1:
-                i += 1
-            prev_ph = 'a'
+            i += 1
+
         elif c_c and nxt_ph == ' ':
             tamil += map2.get(ph, ph) + "்"
             prev_ph = ph
+            i += 1
+
         else:
             tamil += map1.get(ph, ph)
             prev_ph = ph
+            i += 1
 
     # Handle last phoneme
     last_phn = inv_phn[-1]
@@ -132,7 +130,7 @@ def transliterate_to_latin(tamil_text: str) -> str:
         'ஒ':'o', 'ஓ':'oo', 'ஔ':'au', 'க':'k', 'ங':'ng', 'ச':'c', 'ஜ':'j', 'ஞ':'nj', 'ட':'tx',
         'த':'t', 'ந':'nd', 'ண':'nx', 'ன':'n', 'ப':'p', 'ம':'m', 'ய':'y', 'ர':'r', 'ற':'rx',
         'ல':'l', 'ள':'lx', 'ழ':'zh', 'வ':'w', 'ஷ':'sx', 'ஸ':'s', 'ஹ':'h', 'ஃப':'f',
-        'ா':'aa', 'ி':'i', 'ீ':'ii', 'ு':'eu', 'ூ':'uu', 'ெ':'e', 'ே':'ee', 'ை':'ai',
+        'ா':'aa', 'ி':'i', 'ீ':'ii', 'ு':'u', 'ூ':'uu', 'ெ':'e', 'ே':'ee', 'ை':'ai',
         'ொ':'o', 'ோ':'oo', 'ௌ':'au'
     }
 
@@ -188,4 +186,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
